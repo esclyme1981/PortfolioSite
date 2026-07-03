@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eric Clymer — PM Who Ships</title>
-  <meta name="description" content="Seven products, spec'd and shipped by the same person: iOS apps, Chrome extensions, SaaS. Two with revenue. One killed on purpose.">
+  <meta name="description" content="Seven real products, shipped fast: iOS apps, Chrome extensions, SaaS. Two with revenue. One killed on purpose. Working product beats another meeting.">
   <meta property="og:title" content="Eric Clymer — PM Who Ships">
-  <meta property="og:description" content="Seven products, spec'd and shipped by the same person. Two with revenue. One killed on purpose.">
+  <meta property="og:description" content="Seven real products, shipped fast. Two with revenue. One killed on purpose.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://esclyme1981.github.io/PortfolioSite/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -34,12 +34,12 @@
       <div class="term term-flex">
         <div class="term-text">
           <span class="ln prompt"><span class="typed t1">whoami</span></span>
-          <span class="ln big fade f1">Product manager. I write the spec, <em>then I open the editor.</em></span>
+          <span class="ln big fade f1">I don't circle problems with documents. <em>I put working product against them — fast.</em></span>
           <span class="ln prompt"><span class="typed t2">cat credentials.txt</span></span>
           <span class="ln out fade f2">Group PM @ <strong>SimplePractice</strong> — mobile + rapid prototyping across all of Product · founded <strong>Timebomb</strong> (team of 15, 5 yrs) · shipped a <strong>#1 paid App&nbsp;Store app</strong></span>
           <span class="ln prompt"><span class="typed t3">ls ~/products/ | wc -l</span></span>
           <span class="ln out fade f3"><strong>7</strong></span>
-          <span class="ln out fade f4"><em># 4 live · 2 in beta · 1 killed on purpose</em> — every one spec'd, built, and shipped by the same person.</span>
+          <span class="ln out fade f4"><em># 4 live · 2 in beta · 1 killed on purpose</em> — questions answered with product, not meetings.</span>
           <span class="ln prompt fade f4"><span class="cursor"></span></span>
         </div>
         <figure class="headshot fade f1">
@@ -61,15 +61,21 @@
 
       <!-- 01 send-remy -->
       <a class="proj win reveal" href="projects/send-remy.html">
-        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">01</span> · send-remy — iOS + web</span><span class="spacer"></span></span>
-        <span class="collage">
-          <img class="shot-site" src="assets/screenshots/sendremy-tall.jpg" alt="Send Remy landing page — full site" loading="lazy">
-          <img class="shot-phone" src="assets/screenshots/remy-app-01.jpg" alt="Send Remy app — agent debrief" loading="lazy">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">01</span> · send-remy — iOS</span><span class="spacer"></span></span>
+        <span class="collage phone-primary crt-rust">
+          <img class="shot-phone" src="assets/screenshots/remy-app-01.jpg" alt="Send Remy app — brief your Remy" loading="lazy">
+          <span class="pane">
+            <span class="ln prompt">remy --brief</span>
+            <span class="ln cmt"># goal: kill the blank-slate first chat</span>
+            <span class="ln ok">stack: swiftui · supabase · claude api</span>
+            <span class="ln ok">agents run the first 20 messages</span>
+            <span class="ln ok">debrief: score · highlights · tensions</span>
+            <span class="ln hl">→ live on the app store · revenue</span>
+          </span>
         </span>
         <span class="proj-meta">
           <span class="name-row"><h3>Send Remy</h3><span class="tag tag-live">LIVE · REVENUE</span></span>
           <p class="hook">Your AI agent runs the first twenty messages. You only meet the ones worth meeting.</p>
-          <span class="flags">--swiftui --supabase --claude-api --app-store</span>
           <span class="open">open sendremy.com</span>
         </span>
       </a>
@@ -77,14 +83,20 @@
       <!-- 02 hermes -->
       <a class="proj win reveal" href="projects/hermes.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">02</span> · hermes — custom iOS client</span><span class="spacer"></span></span>
-        <span class="collage phones-only">
-          <img class="shot-phone second" src="assets/screenshots/hermes-triage.jpg" alt="Hermes — AI email triage" loading="lazy">
+        <span class="collage phone-primary">
           <img class="shot-phone" src="assets/screenshots/hermes-briefing.jpg" alt="Hermes — daily briefing" loading="lazy">
+          <span class="pane">
+            <span class="ln prompt">hermes --morning</span>
+            <span class="ln cmt"># goal: run 7 products from a pocket</span>
+            <span class="ln ok">stack: swift 6 · gmail api · agents</span>
+            <span class="ln ok">8am briefing · triage · monitoring</span>
+            <span class="ln ok">agents draft, I approve</span>
+            <span class="ln hl">→ private beta · my daily driver</span>
+          </span>
         </span>
         <span class="proj-meta">
           <span class="name-row"><h3>Custom Hermes iOS Client</h3><span class="tag tag-beta">BETA</span></span>
           <p class="hook">One iOS client for my whole agent stack — daily briefing, email triage, product monitoring.</p>
-          <span class="flags">--swift6 --gmail-api --agents --supabase</span>
           <span class="open">./hermes --briefing</span>
         </span>
       </a>
@@ -92,14 +104,20 @@
       <!-- 03 vibecaddy -->
       <a class="proj win reveal" href="projects/vibecaddy.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">03</span> · vibecaddy — chrome extension</span><span class="spacer"></span></span>
-        <span class="collage">
+        <span class="collage crt-green">
           <img class="shot-site" src="assets/screenshots/vibecaddy-tall.jpg" alt="VibeCaddy landing page — full site" loading="lazy">
-          <img class="shot-phone" src="assets/screenshots/vibecaddy-mobile.jpg" alt="VibeCaddy mobile" loading="lazy">
+          <span class="pane">
+            <span class="ln prompt">vibecaddy --inject</span>
+            <span class="ln cmt"># goal: never re-explain your project</span>
+            <span class="ln ok">stack: chrome ext · supabase · claude</span>
+            <span class="ln ok">context injected into every prompt</span>
+            <span class="ln ok">nightly eval agent self-tunes</span>
+            <span class="ln hl">→ live in the chrome web store</span>
+          </span>
         </span>
         <span class="proj-meta">
           <span class="name-row"><h3>VibeCaddy</h3><span class="tag tag-live">LIVE</span></span>
           <p class="hook">Injects your project's context into every AI prompt. Stop re-explaining your stack to ChatGPT.</p>
-          <span class="flags">--chrome-ext --supabase --claude-api --eval-agent</span>
           <span class="open">open vibecaddy.ai</span>
         </span>
       </a>
@@ -107,14 +125,20 @@
       <!-- 04 vibecs -->
       <a class="proj win reveal" href="projects/vibecs.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">04</span> · vibecs — web saas</span><span class="spacer"></span></span>
-        <span class="collage">
+        <span class="collage crt-orange">
           <img class="shot-site" src="assets/screenshots/vibecs-tall.jpg" alt="VibeCS landing page — full site" loading="lazy">
-          <img class="shot-phone" src="assets/screenshots/vibecs-mobile.jpg" alt="VibeCS mobile" loading="lazy">
+          <span class="pane">
+            <span class="ln prompt">vibecs --deploy</span>
+            <span class="ln cmt"># goal: support agent, zero setup</span>
+            <span class="ln ok">stack: crawler · edge fns · claude</span>
+            <span class="ln ok">paste url → live in 3 minutes</span>
+            <span class="ln ok">closed-loop: can't hallucinate</span>
+            <span class="ln hl">→ live · paying customers</span>
+          </span>
         </span>
         <span class="proj-meta">
           <span class="name-row"><h3>VibeCS</h3><span class="tag tag-live">LIVE · REVENUE</span></span>
           <p class="hook">Paste your URL → AI support agent live in 3 minutes. Closed-loop, so it can't hallucinate. Paying customers.</p>
-          <span class="flags">--crawler --edge-functions --claude-api</span>
           <span class="open">open cs-vibe.com</span>
         </span>
       </a>
@@ -122,22 +146,20 @@
       <!-- 05 blockrate -->
       <a class="proj win reveal" href="projects/blockrate.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">05</span> · blockrate — post-mortem</span><span class="spacer"></span></span>
-        <span class="collage">
+        <span class="collage crt-pine">
           <img class="shot-site" src="assets/screenshots/blockrate-web.jpg" alt="BlockRate landing page — group-buying for home services" loading="lazy">
           <span class="pane">
-            <span class="ln cmt"># blockrate — the post-mortem</span>
-            <span class="ln ok">47 neighborhoods · paying customer</span>
-            <span class="ln ok">stripe connect · tiered repricing</span>
-            <span class="ln err"><span class="hl">wrong customer.</span> hunters churn.</span>
-            <span class="ln del">- kill --reason "bad business"</span>
-            <span class="ln add">+ lesson applied everywhere after</span>
-            <span class="ln cmt">process terminated — exit 137</span>
+            <span class="ln prompt">blockrate --autopsy</span>
+            <span class="ln cmt"># goal: group-buy home services</span>
+            <span class="ln ok">stripe connect · supabase</span>
+            <span class="ln ok">47 hoods · real revenue</span>
+            <span class="ln err">wrong customer — read early</span>
+            <span class="ln hl">→ killed on purpose · 137</span>
           </span>
         </span>
         <span class="proj-meta">
           <span class="name-row"><h3>BlockRate</h3><span class="tag tag-killed">KILLED</span><span class="tag tag-live">REVENUE</span></span>
-          <p class="hook">My most sophisticated build. I shut it down anyway — the customer was wrong, and no amount of code fixes that.</p>
-          <span class="flags">--stripe-connect --supabase --13-edge-functions</span>
+          <p class="hook">Real marketplace, real revenue — still the wrong business. Reading that signal in months, not years, is the skill.</p>
           <span class="open">cat post-mortem.md</span>
         </span>
       </a>
@@ -145,22 +167,20 @@
       <!-- 06 savvycash -->
       <a class="proj win reveal" href="projects/savvycash.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">06</span> · savvycash — iOS fintech</span><span class="spacer"></span></span>
-        <span class="collage">
-          <img class="shot-site" src="assets/screenshots/savvycash-web.jpg" alt="SavvyCash — Savi recommends a sweep to savings" loading="lazy">
+        <span class="collage phone-primary crt-azure">
+          <img class="shot-phone" src="assets/screenshots/savvycash-web.jpg" alt="SavvyCash — Savi recommends a sweep to savings" loading="lazy">
           <span class="pane">
-            <span class="ln prompt">savi engine --scan</span>
-            <span class="ln ok">plaid linked · production</span>
-            <span class="ln ok">21 patterns · 12 bills predicted</span>
-            <span class="ln hl">→ sweep $35,631.50 → savings</span>
-            <span class="ln hl">→ 4.4% APY instead of 0%</span>
-            <span class="ln cmt"># proposes only. never moves</span>
-            <span class="ln cmt"># money itself. your trigger.</span>
+            <span class="ln prompt">savi --propose</span>
+            <span class="ln cmt"># goal: wake up idle cash</span>
+            <span class="ln ok">swiftui · plaid · edge fns</span>
+            <span class="ln ok">21 patterns · 12 bills</span>
+            <span class="ln ok">you hold the only trigger</span>
+            <span class="ln hl">→ beta · unreleased</span>
           </span>
         </span>
         <span class="proj-meta">
           <span class="name-row"><h3>SavvyCash</h3><span class="tag tag-beta">BETA</span></span>
           <p class="hook">Finds the cash sleeping in your checking account and proposes the sweep. You hold the only trigger.</p>
-          <span class="flags">--swiftui --plaid --edge-functions</span>
           <span class="open">./savvycash --propose</span>
         </span>
       </a>
@@ -168,14 +188,20 @@
       <!-- 07 norwalk -->
       <a class="proj win reveal" href="projects/norwalk-rental.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">07</span> · norwalk-lane — direct booking</span><span class="spacer"></span></span>
-        <span class="collage">
+        <span class="collage crt-amber">
           <img class="shot-site" src="assets/screenshots/norwalklane-tall.jpg" alt="Norwalk Lane booking site — full site" loading="lazy">
-          <img class="shot-phone" src="assets/screenshots/norwalklane-mobile.jpg" alt="Norwalk Lane mobile" loading="lazy">
+          <span class="pane">
+            <span class="ln prompt">norwalk --book-direct</span>
+            <span class="ln cmt"># goal: own the guest relationship</span>
+            <span class="ln ok">stack: static site · pro photography</span>
+            <span class="ln ok">no platform fee, no middleman</span>
+            <span class="ln ok">returning guests email me</span>
+            <span class="ln hl">→ live · taking bookings</span>
+          </span>
         </span>
         <span class="proj-meta">
           <span class="name-row"><h3>Norwalk Lane</h3><span class="tag tag-live">LIVE</span></span>
           <p class="hook">Direct-booking site for one premium rental. The platform middleman is a fee, not a feature.</p>
-          <span class="flags">--static --direct-booking --pro-photography</span>
           <span class="open">open norwalklane.com</span>
         </span>
       </a>
@@ -191,12 +217,12 @@
       <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">ERIC(1) — General Commands Manual</span><span class="spacer"></span></div>
       <div class="man">
         <h3>NAME</h3>
-        <p><strong>eric</strong> — product manager who ships his own specs</p>
+        <p><strong>eric</strong> — product manager who answers questions with working product</p>
         <h3>SYNOPSIS</h3>
-        <p class="refs">eric [--spec] [--build] [--ship] [--kill-when-wrong]</p>
+        <p class="refs">eric [--prototype] [--ship-fast] [--mentor] [--kill-when-wrong]</p>
         <h3>DESCRIPTION</h3>
-        <p>Most PMs hand off. I don't. Every product in this directory — iOS apps, a Chrome extension, SaaS — was spec'd, built, and shipped by the same pair of hands. The through-line is one opinion held strongly: <code>software should show up already knowing the context</code>. Agents that do the getting-to-know-you before a first date. A support bot whose knowledge base is your own website. Prompts that arrive pre-loaded with your stack. No blank slates, anywhere.</p>
-        <p>The flag I'm proudest of is <code>--kill-when-wrong</code>: BlockRate was the best engineering in this list and the worst business. It's dead because I read the data and pulled the plug. That's a PM skill you can't fake in a slide deck.</p>
+        <p>Documents describe problems. Product answers them. Everything in this directory exists because building the real thing quickly is the fastest way to find out what's true — about the user, the market, and the idea. It's the same job during the day: at SimplePractice I lead mobile and rapid prototyping across all of Product, where most of the work is getting real product in front of real people in days — and <strong>mentoring PMs and teams to do the same</strong>: reach for a build, not another meeting.</p>
+        <p>The flag that took longest to earn is <code>--kill-when-wrong</code>. BlockRate wasn't precious technology — it was a working marketplace with real revenue that was wrong underneath: wrong customer, wrong sector. Recognizing "not right" in months instead of years, and acting on it, is what experience actually looks like. Speed matters on the way out, too.</p>
         <h3>HISTORY</h3>
         <p>Group Product Manager at SimplePractice — leading both mobile and rapid prototyping across all of Product. Founded Timebomb — a 15-person mobile social startup, 5 years. Shipped a #1 paid App Store app internationally.</p>
         <h3>SEE ALSO</h3>

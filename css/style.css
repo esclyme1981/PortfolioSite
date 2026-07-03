@@ -281,14 +281,18 @@ code, .mono { font-family: var(--mono); }
 .proj:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
 .proj .win-bar .title .idx { color: var(--green); font-weight: 700; }
 
-/* collage area — full site + mobile, side by side, no overlap.
-   Background is a DOS-blue CRT: scanlines + phosphor vignette, no grid. */
+/* collage area — one primary visual + a DOS pane, side by side.
+   Background is a retro CRT tinted per project: phosphor glow,
+   scanlines, corner vignette, and a bezel inset. */
 .collage {
+  --crt-hi: #1a3ec4;   /* phosphor bloom (top) */
+  --crt-mid: #10289c;  /* tube body */
+  --crt-lo: #081a70;   /* corners / depth */
   position: relative;
   aspect-ratio: 16 / 9.6;
   background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.055) 0 1px, transparent 1px 3px),
-    radial-gradient(120% 90% at 50% 8%, #1a3ec4 0%, #10289c 48%, #081a70 100%);
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 3px),
+    radial-gradient(115% 105% at 50% 0%, var(--crt-hi) 0%, var(--crt-mid) 46%, var(--crt-lo) 100%);
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   display: flex;
@@ -297,15 +301,33 @@ code, .mono { font-family: var(--mono); }
   gap: clamp(0.8rem, 3%, 1.4rem);
   padding: 4.5% 4%;
 }
-/* faint CRT glow along the top edge */
+/* CRT glass: top glow */
 .collage::before {
   content: '';
   position: absolute;
   inset: 0 0 auto 0;
-  height: 18%;
-  background: linear-gradient(rgba(255,255,255,0.10), transparent);
+  height: 20%;
+  background: linear-gradient(rgba(255,255,255,0.12), transparent);
   pointer-events: none;
 }
+/* CRT tube: corner vignette + bezel inset shadow */
+.collage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(140% 125% at 50% 45%, transparent 58%, rgba(0,0,0,0.38) 100%);
+  box-shadow: inset 0 0 22px rgba(0,0,0,0.45);
+  pointer-events: none;
+}
+.collage > * { position: relative; z-index: 1; }
+
+/* per-project phosphor tints */
+.crt-rust   { --crt-hi: #e05c2b; --crt-mid: #a63c15; --crt-lo: #571c07; }  /* send remy */
+.crt-green  { --crt-hi: #1ba452; --crt-mid: #0d7132; --crt-lo: #063a19; }  /* vibecaddy */
+.crt-orange { --crt-hi: #ff7a1a; --crt-mid: #c2410c; --crt-lo: #6b1f03; }  /* vibecs */
+.crt-pine   { --crt-hi: #2c7a4b; --crt-mid: #17472e; --crt-lo: #082416; }  /* blockrate */
+.crt-azure  { --crt-hi: #3f86f8; --crt-mid: #1d4ed8; --crt-lo: #12277a; }  /* savvycash */
+.crt-amber  { --crt-hi: #c98434; --crt-mid: #8a5215; --crt-lo: #452806; }  /* norwalk */
 /* the zoomed-out full page — whole capture visible, scaled by height.
    max-width + cover keeps landscape shots from starving their neighbor. */
 .collage .shot-site {
@@ -330,10 +352,15 @@ code, .mono { font-family: var(--mono); }
 .proj:hover .collage .shot-phone { transform: rotate(0deg) translateY(-3px); }
 .collage .shot-phone.second { transform: rotate(-1.8deg); }
 .proj:hover .collage .shot-phone.second { transform: rotate(0deg) translateY(-3px); }
-/* two phones, no desktop */
-.collage.phones-only .shot-phone { height: 92%; }
+/* single primary phone beside a pane — straight, dominant */
+.collage.phone-primary .shot-phone {
+  height: 94%;
+  transform: none;
+}
+.proj:hover .collage.phone-primary .shot-phone { transform: translateY(-3px); }
 
-/* terminal-pane collage — DOS screen text straight on the blue */
+/* terminal-pane — DOS screen text straight on the tube.
+   Neutral phosphor palette; readable on every tint. */
 .collage .pane {
   flex: 1;
   align-self: center;
@@ -341,9 +368,9 @@ code, .mono { font-family: var(--mono); }
   padding: 0.4rem 0.2rem;
   font-family: var(--mono);
   font-size: clamp(0.60rem, 1.35vw, 0.72rem);
-  line-height: 1.9;
-  color: #c9d4ff;
-  text-shadow: 0 0 6px rgba(120, 150, 255, 0.35);
+  line-height: 1.95;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.28);
 }
 .pane .ln {
   display: block;
@@ -351,13 +378,13 @@ code, .mono { font-family: var(--mono); }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.pane .ok::before   { content: '✓ '; color: #7dff9e; font-weight: 700; }
-.pane .err::before  { content: '✗ '; color: #ff8f8f; font-weight: 700; }
-.pane .add          { color: #9dffb4; }
-.pane .del          { color: #ffa3a3; }
-.pane .cmt          { color: #7f93e6; }
+.pane .ok::before   { content: '✓ '; color: #a5ffbd; font-weight: 700; }
+.pane .err::before  { content: '✗ '; color: #ffc2c2; font-weight: 700; }
+.pane .add          { color: #b8ffca; }
+.pane .del          { color: #ffc9c9; }
+.pane .cmt          { color: rgba(255, 255, 255, 0.55); }
 .pane .hl           { color: #ffffff; font-weight: 700; }
-.pane .prompt::before { content: '$ '; color: #7dff9e; font-weight: 700; }
+.pane .prompt::before { content: '$ '; color: #a5ffbd; font-weight: 700; }
 
 /* project meta */
 .proj-meta { padding: 0.9rem 1rem 1rem; display: grid; gap: 0.45rem; background: var(--surface); }
