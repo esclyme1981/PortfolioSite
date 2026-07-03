@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlockRate — Eric Clymer</title>
-  <meta name="description" content="A group-buying marketplace for home services in Austin — technically my most ambitious build, and the product I deliberately killed. A case study in knowing when.">
-  <meta property="og:title" content="BlockRate — Eric Clymer">
-  <meta property="og:description" content="My most ambitious build — and the product I deliberately killed. A case study in knowing when.">
+  <title>blockrate — Eric Clymer</title>
+  <meta name="description" content="A group-buying marketplace for home services in Austin. My most sophisticated build — killed on purpose. The post-mortem.">
+  <meta property="og:title" content="blockrate — Eric Clymer">
+  <meta property="og:description" content="My most sophisticated build. Killed on purpose. The post-mortem.">
   <meta property="og:type" content="article">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../css/style.css">
@@ -15,108 +15,114 @@
 
 <header class="masthead">
   <div class="container masthead-inner">
-    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <a class="brand" href="../index.html"><span class="host">eric@clymer</span><span class="path">:~/products/blockrate</span></a>
     <nav>
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="../index.html#work">./work</a>
+      <a href="../index.html#about">./about</a>
+      <a href="../index.html#contact">./contact</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
-  <div class="case-head">
-    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 05 / 09</span></p>
-    <h1>BlockRate <span class="badge badge-retired">Retired</span></h1>
-    <p class="one-liner">A group-buying marketplace for recurring home services in Austin. Neighbors pooled for volume pricing; providers got route density. It worked, technically. I killed it anyway.</p>
+<main class="container case-wrap">
+  <p class="crumbs"><a href="../index.html#work">~/products</a> / blockrate <span>05 of 07</span></p>
+
+  <div class="win case-head-win">
+    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">blockrate — POST-MORTEM.md</span><span class="spacer"></span></div>
+    <div class="term">
+      <div class="h-row"><h1>BlockRate</h1><span class="tag tag-killed">KILLED</span></div>
+      <p class="one-liner">Group-buying for recurring home services: neighbors pooled for volume pricing, providers got route density, the platform took 20%. It worked — technically. This page is about why I shut it down anyway.</p>
+    </div>
   </div>
 
-  <figure class="plate reveal">
-    <div class="spec-plate">
-      <div><div class="stat">47</div><div class="stat-label">Austin neighborhoods live</div></div>
-      <div><div class="stat">13</div><div class="stat-label">Supabase edge functions</div></div>
-      <div><div class="stat">$66</div><div class="stat-label">Per visit at 5-household tier, down from $120 solo</div></div>
-      <div><div class="stat">20%</div><div class="stat-label">Platform take rate</div></div>
-    </div>
-    <figcaption><em>Fig. 01</em> — The ledger at shutdown. The site is down; the numbers stand.</figcaption>
-  </figure>
+  <div class="visuals duo">
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">git log — the build</span><span class="spacer"></span></div>
+      <div class="log">
+        <span class="ln cmt"># two-sided marketplace, launched for real</span>
+        <span class="ln add">+ stripe connect payouts · checkout · billing portal</span>
+        <span class="ln add">+ dynamic tiered repricing on every join/cancel</span>
+        <span class="ln add">+ 30-day rate locks (the trust mechanic)</span>
+        <span class="ln add">+ scheduled visit generation, epoch-aligned</span>
+        <span class="ln add">+ pgmq email queue + dead-letter handling</span>
+        <span class="ln add">+ referral program · blog cms · admin impersonation</span>
+        <span class="ln cmt"># then the part that mattered more</span>
+        <span class="ln del">- wrong customer: discount hunters churn</span>
+        <span class="ln del">- no sector edge in home services</span>
+        <span class="ln del">- go-between trap: their no-shows, my refunds</span>
+        <span class="ln prompt">git tag v-final -m "wrong business. right call."</span>
+        <span class="ln err">process terminated — exit 137</span>
+      </div>
+    </figure>
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">numbers at shutdown</span><span class="spacer"></span></div>
+      <div class="stats">
+        <div><div class="n">47</div><div class="l">austin neighborhoods live</div></div>
+        <div><div class="n">13</div><div class="l">supabase edge functions</div></div>
+        <div><div class="n">$66</div><div class="l">per visit at 5-household tier (vs $120 solo)</div></div>
+        <div><div class="n">20%</div><div class="l">platform take rate</div></div>
+        <div><div class="n">1+</div><div class="l">paying customer</div></div>
+        <div><div class="n bad">0</div><div class="l">reasons to keep going</div></div>
+      </div>
+    </figure>
+  </div>
 
-  <section class="case-section reveal">
-    <span class="label">The Model</span>
+  <section class="case-sec reveal">
+    <h2>the model</h2>
     <div class="prose">
-      <p>Lawn care costs $120 a visit when you buy it alone. BlockRate let neighbors pool: at five-plus households on one block, the price fell to $66 a visit, providers got dense routes instead of scattered one-offs, and the platform took 20%. Group-buying economics applied to the most recurring purchase a homeowner makes.</p>
+      <p>Lawn care runs $120 a visit solo. Pool five-plus households on one block and BlockRate priced it at $66 — providers got dense routes instead of scattered one-offs, and the platform took 20%. Group-buying economics on the most recurring purchase a homeowner makes. On paper, elegant. On paper.</p>
     </div>
   </section>
 
-  <section class="case-section reveal">
-    <span class="label">What I Built</span>
-    <div class="prose">
-      <p>This was the most technically serious product in the portfolio — a real two-sided marketplace, launched across four Austin regions and forty-seven neighborhoods, with at least one paying customer:</p>
-      <ul class="decisions">
-        <li>
-          <span class="decision-title">Money that moves correctly</span>
-          Stripe Connect payouts direct to providers, Stripe Checkout and Billing Portal for customers — with dynamic tiered repricing that recalculated every member's rate on every join or cancellation.
-        </li>
-        <li>
-          <span class="decision-title">Rate protection</span>
-          Thirty-day price locks so a neighbor's cancellation didn't jolt your bill mid-month — the trust mechanic that makes group pricing tolerable.
-        </li>
-        <li>
-          <span class="decision-title">Operational plumbing most MVPs skip</span>
-          Scheduled visit generation with epoch-aligned frequencies, a PGMQ email queue with dead-letter handling via Resend, a Block Champion referral program, a Contentful blog, and admin impersonation for support. Thirteen edge functions, fifteen-plus tables, row-level security throughout.
-        </li>
-      </ul>
+  <section class="case-sec reveal">
+    <h2>why it died</h2>
+    <ul class="takes">
+      <li><strong>Wrong customer.</strong> Cost-conscious consumers hunting discounts are high-churn by definition — every retention lever fights their reason for being there.</li>
+      <li><strong>No sector edge.</strong> I don't know home services from the inside. Every provider-side judgment was secondhand.</li>
+      <li><strong>The go-between trap.</strong> A two-sided marketplace makes both sides' failures yours: provider no-shows became my refunds; customer churn became everyone else's price jump.</li>
+    </ul>
+    <div class="callout red">Sophistication of build ≠ viability of business. Building was never the bottleneck — choosing the right problem and customer is.
+      <span class="src">the one-line lesson that reshaped everything after it</span>
     </div>
   </section>
 
-  <section class="case-section reveal">
-    <span class="label">Why I Killed It</span>
-    <div class="prose">
-      <p>Three reasons, none of them technical.</p>
-      <p><strong>Wrong customer.</strong> Cost-conscious consumers hunting discounts are high-churn and price-defecting — every retention lever fights their core motivation for being there. <strong>No sector edge.</strong> I don't know the home-services industry from the inside, so every provider-side judgment was secondhand. <strong>The go-between trap.</strong> A two-sided marketplace makes you responsible for both sides' failures: provider no-shows became my refunds; customer churn became everyone else's price jumps.</p>
-      <blockquote class="pull">Sophistication of build ≠ viability of business. Building was never the bottleneck — choosing the right problem and customer is.
-        <cite>The lesson that reshaped this portfolio</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <section class="case-section reveal">
-    <span class="label">Stack</span>
-    <dl class="stack-list">
-      <dt>Payments</dt><dd>Stripe Connect, Checkout, Billing Portal</dd>
-      <dt>Backend</dt><dd>Supabase — 13 Edge Functions, 15+ tables, RLS policies</dd>
-      <dt>Email</dt><dd>PGMQ queue with dead-letter handling, delivered via Resend</dd>
-      <dt>Content</dt><dd>Contentful blog CMS</dd>
+  <section class="case-sec reveal">
+    <h2>stack</h2>
+    <dl class="kv">
+      <dt>payments</dt><dd>Stripe Connect · Checkout · Billing Portal</dd>
+      <dt>backend</dt><dd>Supabase — 13 Edge Functions, 15+ tables, RLS throughout</dd>
+      <dt>email</dt><dd>PGMQ queue + dead-letter handling via Resend</dd>
+      <dt>content</dt><dd>Contentful blog CMS</dd>
     </dl>
   </section>
 
-  <section class="case-section reveal">
-    <span class="label">Lessons</span>
+  <section class="case-sec reveal">
+    <h2>lessons</h2>
     <div class="prose">
-      <p>One paying customer doesn't validate a business if the <em>category</em> of customer is wrong. BlockRate is why everything after it targets builders and operators paying for leverage — and why this portfolio treats a well-reasoned shutdown as a shipped outcome. Killing your most sophisticated work because the business underneath it is wrong: that's the PM judgment I'd hire for.</p>
+      <p>One paying customer doesn't validate a business if the <em>category</em> of customer is wrong. BlockRate is why everything after it targets builders and operators paying for leverage — and why a well-reasoned shutdown counts as a shipped outcome in this directory. Killing your best engineering because the business under it is wrong: that's the judgment I'd hire a PM for.</p>
     </div>
   </section>
 
   <nav class="pagination" aria-label="Project navigation">
-    <a href="vibecs.html"><span class="dir">← Previous · № 04</span><span class="name">VibeCS</span></a>
-    <a href="savvycash.html"><span class="dir">Next · № 06 →</span><span class="name">SavvyCash</span></a>
+    <a class="win" href="vibecs.html"><span class="dir">../vibecs</span><span class="name">← 04 · VibeCS</span></a>
+    <a class="win next" href="savvycash.html"><span class="dir">../savvycash</span><span class="name">06 · SavvyCash →</span></a>
   </nav>
 </main>
 
 <footer class="footer" id="contact">
   <div class="container footer-inner">
-    <p class="sign-off">Have something worth building?</p>
+    <p class="prompt-line">contact --any-channel</p>
     <ul>
       <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
-      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">github.com/esclyme1981</a></li>
       <!-- TODO: LinkedIn URL -->
-      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">linkedin</a></li>
     </ul>
-  </div>
-  <div class="container colophon">
-    <span>© <span data-year>2026</span> Eric Clymer</span>
-    <span>Built by hand. No frameworks, no build step.</span>
-    <span>Set in Fraunces &amp; Newsreader</span>
+    <div class="colophon">
+      <span class="exit">exit 0 — © <span data-year>2026</span> Eric Clymer</span>
+      <span>hand-written html/css/js · no frameworks · no build step</span>
+      <span>JetBrains Mono &amp; IBM Plex Sans</span>
+    </div>
   </div>
 </footer>
 

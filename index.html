@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eric Clymer — A Product Manager Who Ships</title>
-  <meta name="description" content="Nine products, built and shipped by hand: iOS apps, Chrome extensions, and SaaS — each one a context layer that eliminates a blank slate.">
-  <meta property="og:title" content="Eric Clymer — A Product Manager Who Ships">
-  <meta property="og:description" content="Nine products, built and shipped by hand: iOS apps, Chrome extensions, and SaaS.">
+  <title>Eric Clymer — PM Who Ships</title>
+  <meta name="description" content="Seven products, spec'd and shipped by the same person: iOS apps, Chrome extensions, SaaS. Two with revenue. One killed on purpose.">
+  <meta property="og:title" content="Eric Clymer — PM Who Ships">
+  <meta property="og:description" content="Seven products, spec'd and shipped by the same person. Two with revenue. One killed on purpose.">
   <meta property="og:type" content="website">
   <!-- TODO after deploy: set absolute og:image URL, e.g. https://<user>.github.io/<repo>/assets/og-image.png -->
   <meta property="og:image" content="assets/og-image.png">
@@ -18,11 +18,11 @@
 
 <header class="masthead">
   <div class="container masthead-inner">
-    <a class="brand" href="index.html">Eric <em>✦</em> Clymer</a>
+    <a class="brand" href="index.html"><span class="host">eric@clymer</span><span class="path">:~/products</span></a>
     <nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#work">./work</a>
+      <a href="#about">./about</a>
+      <a href="#contact">./contact</a>
     </nav>
   </div>
 </header>
@@ -30,191 +30,168 @@
 <main>
   <!-- ================= Hero ================= -->
   <section class="hero container">
-    <p class="kicker label">Product · Portfolio · Est. Austin, TX</p>
-    <h1>A product manager who actually <em>builds</em> the thing — and <em>ships</em> it.</h1>
-    <p class="cred">I lead mobile engineering at SimplePractice. Before that I founded Timebomb, a fifteen-person mobile social startup, and shipped a&nbsp;#1 paid App&nbsp;Store app internationally.</p>
-    <p class="thesis">Everything I build eliminates a blank slate.</p>
+    <div class="win">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">eric@clymer — zsh — 96×24</span><span class="spacer"></span></div>
+      <div class="term">
+        <span class="ln prompt"><span class="typed t1">whoami</span></span>
+        <span class="ln big fade f1">Product manager. I write the spec, <em>then I open the editor.</em></span>
+        <span class="ln prompt"><span class="typed t2">cat credentials.txt</span></span>
+        <span class="ln out fade f2">mobile eng lead @ <strong>SimplePractice</strong> · founded <strong>Timebomb</strong> (team of 15, 5 yrs) · shipped a <strong>#1 paid App&nbsp;Store app</strong></span>
+        <span class="ln prompt"><span class="typed t3">ls ~/products/ | wc -l</span></span>
+        <span class="ln out fade f3"><strong>7</strong></span>
+        <span class="ln out fade f4"><em># 4 live · 2 in beta · 1 killed on purpose</em> — every one spec'd, built, and shipped by the same person.</span>
+        <span class="ln prompt fade f4"><span class="cursor"></span></span>
+      </div>
+    </div>
   </section>
 
-  <!-- ================= Project index ================= -->
+  <!-- ================= Projects ================= -->
   <section id="work" class="container">
-    <div class="section-head">
-      <span class="label">Index of Work</span>
-      <span class="label count">Nine Products · 2024–2026</span>
+    <div class="sec-head">
+      <h2>ls ~/products/</h2>
+      <span class="note">7 entries · ordered by me, not by date</span>
     </div>
 
-    <ol class="toc">
-      <!-- 01 Send Remy -->
-      <li class="reveal">
-        <a class="row" href="projects/send-remy.html">
-          <span class="num">01</span>
-          <span>
-            <span class="entry-title">
-              <h3>Send Remy</h3>
-              <span class="badge badge-live">Live</span>
-            </span>
-            <p class="hook">An iOS dating app where your AI agent has the awkward getting-to-know-you conversations for you — so you only meet the people worth meeting.</p>
-            <span class="tags">SwiftUI · Supabase · Claude API · App Store</span>
-          </span>
-          <span class="thumb"><img src="assets/screenshots/sendremy-thumb.jpg" alt="Send Remy landing page" loading="lazy"></span>
-        </a>
-      </li>
+    <div class="proj-grid">
 
-      <!-- 02 Hermes -->
-      <li class="reveal">
-        <a class="row" href="projects/hermes.html">
-          <span class="num">02</span>
-          <span>
-            <span class="entry-title">
-              <h3>Hermes</h3>
-              <span class="badge badge-beta">Beta</span>
-            </span>
-            <p class="hook">The iOS command deck for my personal agent infrastructure — email triage, brand monitoring, and a daily briefing for this whole portfolio.</p>
-            <span class="tags">Swift 6 · SwiftUI · Gmail API · Agents</span>
-          </span>
-          <span class="thumb">
-            <span class="thumb-type">
-              <span class="glyph">⌘</span>
-              <span class="caption">Private Beta — No Public Build</span>
-            </span>
-          </span>
-        </a>
-      </li>
+      <!-- 01 send-remy -->
+      <a class="proj win reveal" href="projects/send-remy.html">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">01</span> · send-remy — iOS + web</span><span class="spacer"></span></span>
+        <span class="collage">
+          <img class="shot-main" src="assets/screenshots/sendremy-desktop.png" alt="Send Remy landing page" style="object-position: 0 42%;" loading="lazy">
+          <img class="shot-phone" src="assets/screenshots/remy-app-01.jpg" alt="Send Remy app — agent debrief" loading="lazy">
+        </span>
+        <span class="proj-meta">
+          <span class="name-row"><h3>Send Remy</h3><span class="tag tag-live">LIVE</span></span>
+          <p class="hook">Your AI agent runs the first twenty messages. You only meet the ones worth meeting.</p>
+          <span class="flags">--swiftui --supabase --claude-api --app-store</span>
+          <span class="open">open sendremy.com</span>
+        </span>
+      </a>
 
-      <!-- 03 VibeCaddy -->
-      <li class="reveal">
-        <a class="row" href="projects/vibecaddy.html">
-          <span class="num">03</span>
-          <span>
-            <span class="entry-title">
-              <h3>VibeCaddy</h3>
-              <span class="badge badge-live">Live</span>
-            </span>
-            <p class="hook">A Chrome extension that injects your project's context into ChatGPT, Claude, Lovable, and Bolt — so you never re-explain your project to an AI again.</p>
-            <span class="tags">Chrome Extension · Supabase · Claude API</span>
-          </span>
-          <span class="thumb"><img src="assets/screenshots/vibecaddy-thumb.jpg" alt="VibeCaddy landing page" loading="lazy"></span>
-        </a>
-      </li>
+      <!-- 02 hermes -->
+      <a class="proj win reveal" href="projects/hermes.html">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">02</span> · hermes — custom iOS client</span><span class="spacer"></span></span>
+        <span class="collage phones-only">
+          <img class="shot-phone second" src="assets/screenshots/hermes-triage.jpg" alt="Hermes — AI email triage" loading="lazy">
+          <img class="shot-phone" src="assets/screenshots/hermes-briefing.jpg" alt="Hermes — daily briefing" loading="lazy">
+        </span>
+        <span class="proj-meta">
+          <span class="name-row"><h3>Custom Hermes iOS Client</h3><span class="tag tag-beta">BETA</span></span>
+          <p class="hook">One iOS client for my whole agent stack — daily briefing, email triage, product monitoring.</p>
+          <span class="flags">--swift6 --gmail-api --agents --supabase</span>
+          <span class="open">./hermes --briefing</span>
+        </span>
+      </a>
 
-      <!-- 04 VibeCS -->
-      <li class="reveal">
-        <a class="row" href="projects/vibecs.html">
-          <span class="num">04</span>
-          <span>
-            <span class="entry-title">
-              <h3>VibeCS</h3>
-              <span class="badge badge-live">Live · Paying Customers</span>
-            </span>
-            <p class="hook">Zero-config AI customer support: paste your URL, embed one script tag, live in under three minutes. It answers only from your site — and it has revenue.</p>
-            <span class="tags">Web Crawler · Edge Functions · Claude API</span>
-          </span>
-          <span class="thumb"><img src="assets/screenshots/vibecs-thumb.jpg" alt="VibeCS landing page" loading="lazy"></span>
-        </a>
-      </li>
+      <!-- 03 vibecaddy -->
+      <a class="proj win reveal" href="projects/vibecaddy.html">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">03</span> · vibecaddy — chrome extension</span><span class="spacer"></span></span>
+        <span class="collage">
+          <img class="shot-main" src="assets/screenshots/vibecaddy-desktop.jpg" alt="VibeCaddy landing page" loading="lazy">
+          <img class="shot-phone" src="assets/screenshots/vibecaddy-mobile.jpg" alt="VibeCaddy mobile" loading="lazy">
+        </span>
+        <span class="proj-meta">
+          <span class="name-row"><h3>VibeCaddy</h3><span class="tag tag-live">LIVE</span></span>
+          <p class="hook">Injects your project's context into every AI prompt. Stop re-explaining your stack to ChatGPT.</p>
+          <span class="flags">--chrome-ext --supabase --claude-api --eval-agent</span>
+          <span class="open">open vibecaddy.ai</span>
+        </span>
+      </a>
 
-      <!-- 05 BlockRate -->
-      <li class="reveal">
-        <a class="row" href="projects/blockrate.html">
-          <span class="num">05</span>
-          <span>
-            <span class="entry-title">
-              <h3>BlockRate</h3>
-              <span class="badge badge-retired">Retired</span>
-            </span>
-            <p class="hook">A group-buying marketplace for home services — technically my most ambitious build, and the product I deliberately killed. A case study in knowing when.</p>
-            <span class="tags">Stripe Connect · Supabase · 13 Edge Functions</span>
-          </span>
-          <span class="thumb">
-            <span class="thumb-type">
-              <span class="glyph">†</span>
-              <span class="caption">2025 — Retired With Honors</span>
-            </span>
-          </span>
-        </a>
-      </li>
+      <!-- 04 vibecs -->
+      <a class="proj win reveal" href="projects/vibecs.html">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">04</span> · vibecs — web saas</span><span class="spacer"></span></span>
+        <span class="collage">
+          <img class="shot-main" src="assets/screenshots/vibecs-desktop.png" alt="VibeCS landing page" loading="lazy">
+          <img class="shot-phone" src="assets/screenshots/vibecs-mobile.jpg" alt="VibeCS mobile" loading="lazy">
+        </span>
+        <span class="proj-meta">
+          <span class="name-row"><h3>VibeCS</h3><span class="tag tag-live">LIVE · REVENUE</span></span>
+          <p class="hook">Paste your URL → AI support agent live in 3 minutes. Closed-loop, so it can't hallucinate. Paying customers.</p>
+          <span class="flags">--crawler --edge-functions --claude-api</span>
+          <span class="open">open cs-vibe.com</span>
+        </span>
+      </a>
 
-      <!-- 06 SavvyCash -->
-      <li class="reveal">
-        <a class="row" href="projects/savvycash.html">
-          <span class="num">06</span>
-          <span>
-            <span class="entry-title">
-              <h3>SavvyCash</h3>
-              <span class="badge badge-beta">Beta</span>
-            </span>
-            <p class="hook">An iOS app that watches your accounts, spots idle cash, and proposes the sweep to high-yield savings — but never moves a dollar without you.</p>
-            <span class="tags">SwiftUI · Plaid · Supabase Edge Functions</span>
+      <!-- 05 blockrate -->
+      <a class="proj win reveal" href="projects/blockrate.html">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">05</span> · blockrate — post-mortem</span><span class="spacer"></span></span>
+        <span class="collage">
+          <span class="pane">
+            <span class="ln cmt"># blockrate — group-buying for home services</span>
+            <span class="ln ok">stripe connect payouts · tiered repricing</span>
+            <span class="ln ok">47 neighborhoods live · paying customer</span>
+            <span class="ln err"><span class="hl">wrong customer.</span> discount hunters churn.</span>
+            <span class="ln del">- kill --reason "bad business, good code"</span>
+            <span class="ln add">+ lesson applied to everything after</span>
           </span>
-          <span class="thumb">
-            <span class="thumb-type">
-              <span class="glyph">$</span>
-              <span class="caption">In Beta — Unreleased</span>
-            </span>
-          </span>
-        </a>
-      </li>
+        </span>
+        <span class="proj-meta">
+          <span class="name-row"><h3>BlockRate</h3><span class="tag tag-killed">KILLED</span></span>
+          <p class="hook">My most sophisticated build. I shut it down anyway — the customer was wrong, and no amount of code fixes that.</p>
+          <span class="flags">--stripe-connect --supabase --13-edge-functions</span>
+          <span class="open">cat post-mortem.md</span>
+        </span>
+      </a>
 
-      <!-- 07 WorkspaceHub -->
-      <li class="reveal">
-        <a class="row" href="projects/workspacehub.html">
-          <span class="num">07</span>
-          <span>
-            <span class="entry-title">
-              <h3>WorkspaceHub</h3>
-              <span class="badge badge-building">Building</span>
-            </span>
-            <p class="hook">What if the PRD were a prompt bar? Ten product roles steer one conversation while the AI builds a living, shared prototype in real time.</p>
-            <span class="tags">Next.js · Supabase Realtime · TypeScript</span>
+      <!-- 06 savvycash -->
+      <a class="proj win reveal" href="projects/savvycash.html">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">06</span> · savvycash — iOS fintech</span><span class="spacer"></span></span>
+        <span class="collage">
+          <span class="pane">
+            <span class="ln prompt">savvycash engine --scan</span>
+            <span class="ln ok">plaid linked · 3 accounts · production</span>
+            <span class="ln ok">21 spending patterns detected</span>
+            <span class="ln ok">12 upcoming bills predicted</span>
+            <span class="ln hl">→ proposal: sweep $2,400 checking → HYSA</span>
+            <span class="ln cmt"># proposes only. never moves money itself.</span>
           </span>
-          <span class="thumb"><img src="assets/screenshots/workspacehub-thumb.jpg" alt="WorkspaceHub prototype" loading="lazy"></span>
-        </a>
-      </li>
+        </span>
+        <span class="proj-meta">
+          <span class="name-row"><h3>SavvyCash</h3><span class="tag tag-beta">BETA</span></span>
+          <p class="hook">Finds the cash sleeping in your checking account and proposes the sweep. You hold the only trigger.</p>
+          <span class="flags">--swiftui --plaid --edge-functions</span>
+          <span class="open">./savvycash --propose</span>
+        </span>
+      </a>
 
-      <!-- 08 PlayDate -->
-      <li class="reveal">
-        <a class="row" href="projects/playdate.html">
-          <span class="num">08</span>
-          <span>
-            <span class="entry-title">
-              <h3>PlayDate</h3>
-              <span class="badge badge-live">Live</span>
-            </span>
-            <p class="hook">Takes the group-text chaos out of coordinating kids' playdates — a scheduling tool for the family calendar's most under-served event.</p>
-            <span class="tags">Web App · playdate.site</span>
-          </span>
-          <span class="thumb"><img src="assets/screenshots/playdate-thumb.jpg" alt="PlayDate web app" loading="lazy"></span>
-        </a>
-      </li>
+      <!-- 07 norwalk -->
+      <a class="proj win reveal" href="projects/norwalk-rental.html">
+        <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">07</span> · norwalk-lane — direct booking</span><span class="spacer"></span></span>
+        <span class="collage">
+          <img class="shot-main" src="assets/screenshots/norwalklane-desktop.jpg" alt="Norwalk Lane booking site" loading="lazy">
+          <img class="shot-phone" src="assets/screenshots/norwalklane-mobile.jpg" alt="Norwalk Lane mobile" loading="lazy">
+        </span>
+        <span class="proj-meta">
+          <span class="name-row"><h3>Norwalk Lane</h3><span class="tag tag-live">LIVE</span></span>
+          <p class="hook">Direct-booking site for one premium rental. The platform middleman is a fee, not a feature.</p>
+          <span class="flags">--static --direct-booking --pro-photography</span>
+          <span class="open">open norwalklane.com</span>
+        </span>
+      </a>
 
-      <!-- 09 NorwalkRental -->
-      <li class="reveal">
-        <a class="row" href="projects/norwalk-rental.html">
-          <span class="num">09</span>
-          <span>
-            <span class="entry-title">
-              <h3>Norwalk Lane</h3>
-              <span class="badge badge-live">Live</span>
-            </span>
-            <p class="hook">A direct-booking site for one premium short-term rental — owning the guest relationship instead of renting it from a platform.</p>
-            <span class="tags">Static Site · Direct Booking · Photography</span>
-          </span>
-          <span class="thumb"><img src="assets/screenshots/norwalklane-thumb.jpg" alt="Norwalk Lane booking site" loading="lazy"></span>
-        </a>
-      </li>
-    </ol>
+    </div>
 
     <!-- ================= About ================= -->
-    <div class="section-head" id="about">
-      <span class="label">About</span>
-      <span class="label count">The Operating Thesis</span>
+    <div class="sec-head" id="about">
+      <h2>man eric</h2>
+      <span class="note">manual page · short by design</span>
     </div>
-    <div class="about" style="padding-top: clamp(1.5rem, 3.4vw, 2.4rem);">
-      <div class="marginalia reveal">¶</div>
-      <div class="prose reveal">
-        <p class="lede">Most product managers hand a spec to someone else. I write the spec, then I open the editor. Nine products in this ledger — iOS apps, Chrome extensions, SaaS — every one designed, built, and shipped by my own hand.</p>
-        <p>They all share one thesis: <strong>context layers that eliminate blank slates.</strong> VibeCaddy loads your project into every AI conversation. VibeCS turns your website into a support agent that already knows your product. Send Remy's agents do the getting-to-know-you before you ever say hello. WorkspaceHub replaces the blank PRD with a living prototype. Different markets, same conviction: software should show up already knowing the context.</p>
-        <p>The day job: I lead mobile engineering at SimplePractice. The scar tissue: five years founding Timebomb, a mobile social startup I grew to a team of fifteen. The proof of instinct: a #1 paid App Store app, internationally. And the discipline this portfolio is proudest of — <a href="projects/blockrate.html">killing the most sophisticated thing I ever built</a> because it was the wrong business, no matter how good the engineering was.</p>
+    <div class="win reveal" style="max-width: 56rem;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">ERIC(1) — General Commands Manual</span><span class="spacer"></span></div>
+      <div class="man">
+        <h3>NAME</h3>
+        <p><strong>eric</strong> — product manager who ships his own specs</p>
+        <h3>SYNOPSIS</h3>
+        <p class="refs">eric [--spec] [--build] [--ship] [--kill-when-wrong]</p>
+        <h3>DESCRIPTION</h3>
+        <p>Most PMs hand off. I don't. Every product in this directory — iOS apps, a Chrome extension, SaaS — was spec'd, built, and shipped by the same pair of hands. The through-line is one opinion held strongly: <code>software should show up already knowing the context</code>. Agents that do the getting-to-know-you before a first date. A support bot whose knowledge base is your own website. Prompts that arrive pre-loaded with your stack. No blank slates, anywhere.</p>
+        <p>The flag I'm proudest of is <code>--kill-when-wrong</code>: BlockRate was the best engineering in this list and the worst business. It's dead because I read the data and pulled the plug. That's a PM skill you can't fake in a slide deck.</p>
+        <h3>HISTORY</h3>
+        <p>Leads mobile engineering at SimplePractice. Founded Timebomb — a 15-person mobile social startup, 5 years. Shipped a #1 paid App Store app internationally.</p>
+        <h3>SEE ALSO</h3>
+        <p class="refs"><a href="projects/vibecaddy.html">vibecaddy(3)</a>, <a href="projects/vibecs.html">vibecs(4)</a>, <a href="projects/blockrate.html">blockrate(5) — deceased</a></p>
       </div>
     </div>
   </section>
@@ -223,18 +200,18 @@
 <!-- ================= Footer ================= -->
 <footer class="footer" id="contact">
   <div class="container footer-inner">
-    <p class="sign-off">Have something worth building?</p>
+    <p class="prompt-line">contact --any-channel</p>
     <ul>
       <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
-      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">github.com/esclyme1981</a></li>
       <!-- TODO: LinkedIn URL -->
-      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">linkedin</a></li>
     </ul>
-  </div>
-  <div class="container colophon">
-    <span>© <span data-year>2026</span> Eric Clymer</span>
-    <span>Built by hand. No frameworks, no build step.</span>
-    <span>Set in Fraunces &amp; Newsreader</span>
+    <div class="colophon">
+      <span class="exit">exit 0 — © <span data-year>2026</span> Eric Clymer</span>
+      <span>hand-written html/css/js · no frameworks · no build step</span>
+      <span>JetBrains Mono &amp; IBM Plex Sans</span>
+    </div>
   </div>
 </footer>
 

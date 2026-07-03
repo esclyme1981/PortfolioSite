@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found — Eric Clymer</title>
+  <title>404 — Eric Clymer</title>
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/style.css">
@@ -12,29 +12,34 @@
 
 <header class="masthead">
   <div class="container masthead-inner">
-    <a class="brand" href="index.html">Eric <em>✦</em> Clymer</a>
+    <a class="brand" href="index.html"><span class="host">eric@clymer</span><span class="path">:~/products</span></a>
     <nav>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#work">./work</a>
+      <a href="index.html#about">./about</a>
+      <a href="index.html#contact">./contact</a>
     </nav>
   </div>
 </header>
 
 <main class="container lost">
-  <p class="label">Error 404 — Not In The Ledger</p>
-  <div class="big">404</div>
-  <div class="prose" style="max-width: 40ch; margin-top: 1.5rem;">
-    <p>This page isn't in the index. It may have shipped, pivoted, or been retired with honors.</p>
-    <p><a href="index.html#work">← Back to the index of work</a></p>
+  <div class="win">
+    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">eric@clymer — zsh</span><span class="spacer"></span></div>
+    <div class="term">
+      <span class="ln prompt">open ./this-page</span>
+      <span class="ln out"><strong>zsh: no such file or directory</strong> — it may have shipped, pivoted, or been killed on purpose.</span>
+      <span class="ln out">&nbsp;</span>
+      <span class="ln prompt"><a href="index.html#work" style="color: var(--green-deep); font-weight:600; text-decoration:none;">cd ~/products</a> <span class="cursor"></span></span>
+      <span class="ln out"><em style="color: var(--red); font-style: normal;">exit 127</em></span>
+    </div>
   </div>
 </main>
 
 <footer class="footer">
-  <div class="container colophon">
-    <span>© <span data-year>2026</span> Eric Clymer</span>
-    <span>Built by hand. No frameworks, no build step.</span>
-    <span>Set in Fraunces &amp; Newsreader</span>
+  <div class="container footer-inner">
+    <div class="colophon">
+      <span class="exit">© <span data-year>2026</span> Eric Clymer</span>
+      <span>hand-written html/css/js · no frameworks · no build step</span>
+    </div>
   </div>
 </footer>
 

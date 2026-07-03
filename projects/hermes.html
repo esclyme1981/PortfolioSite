@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hermes — Eric Clymer</title>
-  <meta name="description" content="An iOS command deck for a personal agent infrastructure — email triage, brand monitoring, and a daily briefing for a nine-product portfolio.">
-  <meta property="og:title" content="Hermes — Eric Clymer">
-  <meta property="og:description" content="The iOS command deck for my personal agent infrastructure.">
+  <title>hermes — Eric Clymer</title>
+  <meta name="description" content="Custom Hermes iOS Client — one SwiftUI app for a personal agent stack: daily briefing, AI email triage, and product monitoring for a seven-product portfolio.">
+  <meta property="og:title" content="hermes — Eric Clymer">
+  <meta property="og:description" content="One iOS client for my whole agent stack — briefing, triage, monitoring.">
   <meta property="og:type" content="article">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../css/style.css">
@@ -15,106 +15,106 @@
 
 <header class="masthead">
   <div class="container masthead-inner">
-    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <a class="brand" href="../index.html"><span class="host">eric@clymer</span><span class="path">:~/products/hermes</span></a>
     <nav>
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="../index.html#work">./work</a>
+      <a href="../index.html#about">./about</a>
+      <a href="../index.html#contact">./contact</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
-  <div class="case-head">
-    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 02 / 09</span></p>
-    <h1>Hermes <span class="badge badge-beta">Beta</span></h1>
-    <p class="one-liner">The iOS command deck for my personal agent infrastructure — the operations layer that lets one person run a nine-product portfolio from a phone.</p>
+<main class="container case-wrap">
+  <p class="crumbs"><a href="../index.html#work">~/products</a> / hermes <span>02 of 07</span></p>
+
+  <div class="win case-head-win">
+    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">hermes — README.md</span><span class="spacer"></span></div>
+    <div class="term">
+      <div class="h-row"><h1>Custom Hermes iOS Client</h1><span class="tag tag-beta">BETA</span></div>
+      <p class="one-liner">One SwiftUI client for my personal agent stack. The agents run all night on cron — email triage, outreach, brand monitoring. Hermes is where I read the results and approve the actions, from a phone.</p>
+    </div>
   </div>
 
-  <figure class="plate reveal">
-    <div class="phone">
-      <div class="screen">
-        <span class="app-title">Hermes</span>
-        <span class="line">Daily Briefing — 8:00 AM</span>
-        <span class="line"><em>▸</em> 4 emails need replies · 9 archived</span>
-        <span class="line"><em>▸</em> VibeCS outreach: 23 sent, 0 bounces</span>
-        <span class="line"><em>▸</em> 2 Remy agent convos to spot-check</span>
-        <span class="line"><em>▸</em> Reddit: 1 new VibeCaddy mention</span>
-        <span class="line"><em>▸</em> All products nominal</span>
+  <div class="visuals trio">
+    <figure class="win shot-win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">briefing.swift</span><span class="spacer"></span></div>
+      <img src="../assets/screenshots/hermes-briefing.jpg" alt="Hermes — daily 8:00 AM briefing view" loading="lazy">
+      <figcaption class="cap">the 8:00 AM briefing — inbox, outreach, agents, product status in one screen</figcaption>
+    </figure>
+    <figure class="win shot-win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">triage.swift</span><span class="spacer"></span></div>
+      <img src="../assets/screenshots/hermes-triage.jpg" alt="Hermes — AI email triage with suggested actions" loading="lazy">
+      <figcaption class="cap">triage — the agent drafts, I approve. "approve all" is the whole UX thesis</figcaption>
+    </figure>
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">crontab -l</span><span class="spacer"></span></div>
+      <div class="log">
+        <span class="ln cmt"># the agent stack hermes fronts</span>
+        <span class="ln ok"><span class="hl">06:00</span> gmail triage · draft + archive</span>
+        <span class="ln ok"><span class="hl">06:30</span> vibecs outreach pipeline</span>
+        <span class="ln ok"><span class="hl">07:00</span> reddit brand monitor</span>
+        <span class="ln ok"><span class="hl">07:30</span> product status sweep</span>
+        <span class="ln ok"><span class="hl">08:00</span> compile daily briefing</span>
+        <span class="ln cmt"># push → hermes → my pocket</span>
       </div>
-    </div>
-    <figcaption><em>Fig. 01</em> — The morning briefing, typeset. Private beta; no public build yet.</figcaption>
-  </figure>
+      <figcaption class="cap" style="display:block;">the overnight schedule the app reports on</figcaption>
+    </figure>
+  </div>
 
-  <section class="case-section reveal">
-    <span class="label">The Problem</span>
+  <section class="case-sec reveal">
+    <h2>problem</h2>
     <div class="prose">
-      <p>Running nine products solo generates a very particular kind of noise: support email, outreach pipelines, brand mentions, agent conversations, app statuses. Checking all of it means sitting at a desk cycling through dashboards — which is exactly the kind of recurring, low-judgment work that should belong to software.</p>
+      <p>Running seven products solo generates constant, low-judgment ops noise: support email, outreach results, brand mentions, app health. Checking it all means a desk and five dashboards. That's a job for software I already built — the agents existed; they just had no front door.</p>
     </div>
   </section>
 
-  <section class="case-section reveal">
-    <span class="label">What I Built</span>
-    <div class="prose">
-      <p>Hermes is the iOS client for a self-hosted agent stack that already runs the portfolio's operations on cron. The app puts that infrastructure in a pocket:</p>
-      <ul class="decisions">
-        <li>
-          <span class="decision-title">Email triage from anywhere</span>
-          Gmail triage over OAuth — the agent drafts, archives, and flags; I approve from the phone.
-        </li>
-        <li>
-          <span class="decision-title">One briefing instead of five dashboards</span>
-          Every morning at 8:00: email summary, overnight VibeCS outreach results, Reddit brand mentions, calendar, and per-product status — aggregated into a single readable digest.
-        </li>
-        <li>
-          <span class="decision-title">Ask the vault</span>
-          Natural-language queries against my Obsidian knowledge base — "what did we learn from BlockRate?" gets an answer with sources, on the train.
-        </li>
-        <li>
-          <span class="decision-title">Spot-check the agents</span>
-          Live views into Send Remy agent conversations and SavvyCash debugging — the portfolio's other AI systems, supervised from one app.
-        </li>
-      </ul>
-      <p>The meta-point is the thesis eating its own tail: <strong>I run the portfolio through an agent I built.</strong> Hermes is the context layer for being me.</p>
-    </div>
+  <section class="case-sec reveal">
+    <h2>built</h2>
+    <ul class="takes">
+      <li><strong>The daily briefing.</strong> One screen at 8:00 AM: what the agents did overnight, what needs me, and per-product status. Five dashboards become one glance.</li>
+      <li><strong>Triage with a trigger.</strong> Gmail agent drafts replies and archives noise; Hermes shows the queue with suggested actions and an "approve all." Human judgment stays in the loop — but only the judgment part.</li>
+      <li><strong>Ask the vault.</strong> Natural-language queries against my Obsidian knowledge base — "what did BlockRate teach us?" answered on the train.</li>
+      <li><strong>Agents watching agents.</strong> Spot-check views into Send Remy conversations and SavvyCash's engine. The portfolio's AI, supervised from one app.</li>
+    </ul>
+    <div class="callout">The meta-point: I run the portfolio through an agent I built. Hermes is the context layer for being me.</div>
   </section>
 
-  <section class="case-section reveal">
-    <span class="label">Stack</span>
-    <dl class="stack-list">
-      <dt>iOS</dt><dd>Swift 6, SwiftUI</dd>
-      <dt>Agent layer</dt><dd>Self-hosted automation stack on cron — triage, monitoring, briefings</dd>
-      <dt>Integrations</dt><dd>Gmail API (OAuth), Supabase, Reddit API, Obsidian vault</dd>
+  <section class="case-sec reveal">
+    <h2>stack</h2>
+    <dl class="kv">
+      <dt>ios</dt><dd>Swift 6 · SwiftUI</dd>
+      <dt>agents</dt><dd>self-hosted automation stack on cron</dd>
+      <dt>integrations</dt><dd>Gmail API (OAuth) · Supabase · Reddit API · Obsidian vault</dd>
     </dl>
   </section>
 
-  <section class="case-section reveal">
-    <span class="label">Status &amp; Outcome</span>
+  <section class="case-sec reveal">
+    <h2>status</h2>
     <div class="prose">
-      <p><strong>Private beta</strong> — running daily on my own device, which is both its distribution and its product review. It ships publicly if and when the agent stack generalizes beyond an audience of one.</p>
+      <p><strong>Private beta — an audience of one, daily.</strong> Screenshots above are from the simulator build. It ships publicly if the agent stack ever generalizes beyond me; until then it's the most-used app on my phone, which is its own kind of product-market fit.</p>
     </div>
   </section>
 
   <nav class="pagination" aria-label="Project navigation">
-    <a href="send-remy.html"><span class="dir">← Previous · № 01</span><span class="name">Send Remy</span></a>
-    <a href="vibecaddy.html"><span class="dir">Next · № 03 →</span><span class="name">VibeCaddy</span></a>
+    <a class="win" href="send-remy.html"><span class="dir">../send-remy</span><span class="name">← 01 · Send Remy</span></a>
+    <a class="win next" href="vibecaddy.html"><span class="dir">../vibecaddy</span><span class="name">03 · VibeCaddy →</span></a>
   </nav>
 </main>
 
 <footer class="footer" id="contact">
   <div class="container footer-inner">
-    <p class="sign-off">Have something worth building?</p>
+    <p class="prompt-line">contact --any-channel</p>
     <ul>
       <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
-      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">github.com/esclyme1981</a></li>
       <!-- TODO: LinkedIn URL -->
-      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">linkedin</a></li>
     </ul>
-  </div>
-  <div class="container colophon">
-    <span>© <span data-year>2026</span> Eric Clymer</span>
-    <span>Built by hand. No frameworks, no build step.</span>
-    <span>Set in Fraunces &amp; Newsreader</span>
+    <div class="colophon">
+      <span class="exit">exit 0 — © <span data-year>2026</span> Eric Clymer</span>
+      <span>hand-written html/css/js · no frameworks · no build step</span>
+      <span>JetBrains Mono &amp; IBM Plex Sans</span>
+    </div>
   </div>
 </footer>
 
