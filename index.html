@@ -17,7 +17,7 @@
 
 <header class="masthead">
   <div class="container masthead-inner">
-    <a class="brand" href="index.html"><span class="host">eric@clymer</span><span class="path">:~/products</span></a>
+    <a class="brand" href="index.html"><span class="host">ericclymer</span><span class="path">:~/products</span></a>
     <nav>
       <a href="#work">./work</a>
       <a href="#about">./about</a>
@@ -30,16 +30,22 @@
   <!-- ================= Hero ================= -->
   <section class="hero container">
     <div class="win">
-      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">eric@clymer — zsh — 96×24</span><span class="spacer"></span></div>
-      <div class="term">
-        <span class="ln prompt"><span class="typed t1">whoami</span></span>
-        <span class="ln big fade f1">Product manager. I write the spec, <em>then I open the editor.</em></span>
-        <span class="ln prompt"><span class="typed t2">cat credentials.txt</span></span>
-        <span class="ln out fade f2">Group PM @ <strong>SimplePractice</strong> — mobile + rapid prototyping across all of Product · founded <strong>Timebomb</strong> (team of 15, 5 yrs) · shipped a <strong>#1 paid App&nbsp;Store app</strong></span>
-        <span class="ln prompt"><span class="typed t3">ls ~/products/ | wc -l</span></span>
-        <span class="ln out fade f3"><strong>7</strong></span>
-        <span class="ln out fade f4"><em># 4 live · 2 in beta · 1 killed on purpose</em> — every one spec'd, built, and shipped by the same person.</span>
-        <span class="ln prompt fade f4"><span class="cursor"></span></span>
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">ericclymer — zsh — 96×24</span><span class="spacer"></span></div>
+      <div class="term term-flex">
+        <div class="term-text">
+          <span class="ln prompt"><span class="typed t1">whoami</span></span>
+          <span class="ln big fade f1">Product manager. I write the spec, <em>then I open the editor.</em></span>
+          <span class="ln prompt"><span class="typed t2">cat credentials.txt</span></span>
+          <span class="ln out fade f2">Group PM @ <strong>SimplePractice</strong> — mobile + rapid prototyping across all of Product · founded <strong>Timebomb</strong> (team of 15, 5 yrs) · shipped a <strong>#1 paid App&nbsp;Store app</strong></span>
+          <span class="ln prompt"><span class="typed t3">ls ~/products/ | wc -l</span></span>
+          <span class="ln out fade f3"><strong>7</strong></span>
+          <span class="ln out fade f4"><em># 4 live · 2 in beta · 1 killed on purpose</em> — every one spec'd, built, and shipped by the same person.</span>
+          <span class="ln prompt fade f4"><span class="cursor"></span></span>
+        </div>
+        <figure class="headshot fade f1">
+          <img src="assets/eric.jpg" alt="Eric Clymer">
+          <figcaption>eric.jpg</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -61,7 +67,7 @@
           <img class="shot-phone" src="assets/screenshots/remy-app-01.jpg" alt="Send Remy app — agent debrief" loading="lazy">
         </span>
         <span class="proj-meta">
-          <span class="name-row"><h3>Send Remy</h3><span class="tag tag-live">LIVE</span></span>
+          <span class="name-row"><h3>Send Remy</h3><span class="tag tag-live">LIVE · REVENUE</span></span>
           <p class="hook">Your AI agent runs the first twenty messages. You only meet the ones worth meeting.</p>
           <span class="flags">--swiftui --supabase --claude-api --app-store</span>
           <span class="open">open sendremy.com</span>
@@ -117,21 +123,19 @@
       <a class="proj win reveal" href="projects/blockrate.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">05</span> · blockrate — post-mortem</span><span class="spacer"></span></span>
         <span class="collage">
+          <img class="shot-site" src="assets/screenshots/blockrate-web.jpg" alt="BlockRate landing page — group-buying for home services" loading="lazy">
           <span class="pane">
-            <span class="ln cmt"># blockrate — group-buying for home services</span>
-            <span class="ln ok">stripe connect payouts · tiered repricing</span>
-            <span class="ln ok">30-day rate locks · referral program</span>
-            <span class="ln ok">13 edge functions · 15+ tables · rls</span>
-            <span class="ln ok">47 neighborhoods live · paying customer</span>
-            <span class="ln err"><span class="hl">wrong customer.</span> discount hunters churn.</span>
-            <span class="ln err"><span class="hl">go-between trap.</span> their no-shows, my refunds.</span>
-            <span class="ln del">- kill --reason "bad business, good code"</span>
-            <span class="ln add">+ lesson applied to everything after</span>
+            <span class="ln cmt"># blockrate — the post-mortem</span>
+            <span class="ln ok">47 neighborhoods · paying customer</span>
+            <span class="ln ok">stripe connect · tiered repricing</span>
+            <span class="ln err"><span class="hl">wrong customer.</span> hunters churn.</span>
+            <span class="ln del">- kill --reason "bad business"</span>
+            <span class="ln add">+ lesson applied everywhere after</span>
             <span class="ln cmt">process terminated — exit 137</span>
           </span>
         </span>
         <span class="proj-meta">
-          <span class="name-row"><h3>BlockRate</h3><span class="tag tag-killed">KILLED</span></span>
+          <span class="name-row"><h3>BlockRate</h3><span class="tag tag-killed">KILLED</span><span class="tag tag-live">REVENUE</span></span>
           <p class="hook">My most sophisticated build. I shut it down anyway — the customer was wrong, and no amount of code fixes that.</p>
           <span class="flags">--stripe-connect --supabase --13-edge-functions</span>
           <span class="open">cat post-mortem.md</span>
@@ -142,17 +146,15 @@
       <a class="proj win reveal" href="projects/savvycash.html">
         <span class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title"><span class="idx">06</span> · savvycash — iOS fintech</span><span class="spacer"></span></span>
         <span class="collage">
+          <img class="shot-site" src="assets/screenshots/savvycash-web.jpg" alt="SavvyCash — Savi recommends a sweep to savings" loading="lazy">
           <span class="pane">
-            <span class="ln prompt">savvycash engine --scan</span>
-            <span class="ln ok">plaid linked · 3 accounts · production</span>
-            <span class="ln ok">synced 2,847 transactions</span>
-            <span class="ln ok">21 spending patterns detected</span>
-            <span class="ln ok">12 upcoming bills predicted</span>
-            <span class="ln ok">cc due dates via liabilities api</span>
-            <span class="ln hl">→ proposal: sweep $2,400 checking → HYSA</span>
-            <span class="ln hl">→ safe window: 9 days until rent</span>
-            <span class="ln cmt"># proposes only. never moves money itself.</span>
-            <span class="ln cmt"># you hold the only trigger.</span>
+            <span class="ln prompt">savi engine --scan</span>
+            <span class="ln ok">plaid linked · production</span>
+            <span class="ln ok">21 patterns · 12 bills predicted</span>
+            <span class="ln hl">→ sweep $35,631.50 → savings</span>
+            <span class="ln hl">→ 4.4% APY instead of 0%</span>
+            <span class="ln cmt"># proposes only. never moves</span>
+            <span class="ln cmt"># money itself. your trigger.</span>
           </span>
         </span>
         <span class="proj-meta">
@@ -210,8 +212,8 @@
     <p class="prompt-line">contact --any-channel</p>
     <ul>
       <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
-      <li><a href="https://github.com/esclyme1981" rel="noopener">github.com/esclyme1981</a></li>
-      <li><a href="https://www.linkedin.com/in/ericclymer/" rel="noopener">linkedin.com/in/ericclymer</a></li>
+      <li><a href="https://github.com/esclyme1981" target="_blank" rel="noopener noreferrer">github.com/esclyme1981</a></li>
+      <li><a href="https://www.linkedin.com/in/ericclymer/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ericclymer</a></li>
     </ul>
     <div class="colophon">
       <span class="exit">exit 0 — © <span data-year>2026</span> Eric Clymer</span>
