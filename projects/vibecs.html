@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeCS — Eric Clymer</title>
+  <meta name="description" content="Zero-config AI customer support: paste your URL, embed one script tag, live in under three minutes. Built and shipped by Eric Clymer — with paying customers.">
+  <meta property="og:title" content="VibeCS — Eric Clymer">
+  <meta property="og:description" content="Zero-config AI customer support: paste a URL, embed one tag, live in under three minutes.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="case-head">
+    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 04 / 09</span></p>
+    <h1>VibeCS <span class="badge badge-live">Live · Paying Customers</span></h1>
+    <p class="one-liner">Zero-config AI customer support. Paste your URL, embed one script tag, and a support agent that already knows your product is live in under three minutes.</p>
+    <div class="links">
+      <a href="https://cs-vibe.com" rel="noopener">cs-vibe.com</a>
+    </div>
+  </div>
+
+  <figure class="plate plate-browser reveal">
+    <div class="chrome"><i></i><i></i><i></i><span class="url">cs-vibe.com</span></div>
+    <img src="../assets/screenshots/vibecs-desktop.png" alt="VibeCS landing page — Deploy an AI chat widget in minutes">
+    <figcaption><em>Fig. 01</em> — The pitch is the product: paste URL → get customer support AI. Done.</figcaption>
+  </figure>
+
+  <section class="case-section reveal">
+    <span class="label">The Problem</span>
+    <div class="prose">
+      <p>Intercom and Zendesk are built for companies with a support <em>team</em> — and a week to spend on setup, training data, and prompt configuration. Indie builders and small SaaS operators have none of that. So their sites either have no support at all, or a generic chatbot that cheerfully hallucinates answers about a product it's never read.</p>
+      <p>The people who most need automated support are exactly the people who will never configure it. The setup step isn't a hurdle — it's the whole reason the category doesn't serve them.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">What I Built</span>
+    <div class="prose">
+      <p>VibeCS deletes the setup step. You paste your URL; a crawler reads your landing page, docs, FAQs, and pricing; and the widget goes live with one async script tag. The agent's knowledge base <strong>is your website</strong> — nothing to write, nothing to train, re-crawled weekly so it stays current.</p>
+      <ul class="decisions">
+        <li>
+          <span class="decision-title">Closed-loop by design</span>
+          The agent answers only from crawled content, and says "I don't know" rather than guessing. Hallucination isn't mitigated — it's structurally impossible to answer from outside the loop. That's a trust decision, not a technical limitation.
+        </li>
+        <li>
+          <span class="decision-title">Personas instead of prompt engineering</span>
+          Two pre-built voices — "The Buddy" (friendly) and "The Engineer" (technical) — so operators pick a personality instead of writing a system prompt.
+        </li>
+        <li>
+          <span class="decision-title">The widget is the funnel</span>
+          Every embedded widget carries a small "Powered by VibeCS" mark. The product's own footprint is its distribution flywheel.
+        </li>
+        <li>
+          <span class="decision-title">It built its own sales team</span>
+          A fully automated outreach pipeline runs nightly: six directory scrapers find newly launched products, a detector skips anyone who already has support chat, and a three-layer email-discovery stack finds the founder. One recent run: 120 products scraped, 23 personalized emails sent, zero failures.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Stack</span>
+    <dl class="stack-list">
+      <dt>Ingestion</dt><dd>Auto-crawler over landing, docs, FAQ, and pricing pages; weekly re-crawl</dd>
+      <dt>Backend</dt><dd>Supabase — Postgres, Auth, Edge Functions</dd>
+      <dt>AI</dt><dd>Anthropic Claude API, grounded in the closed-loop knowledge base</dd>
+      <dt>Widget</dt><dd>Async embed script — no impact on host-page performance</dd>
+      <dt>Growth</dt><dd>Nightly cron outreach pipeline with dedup, bounce handling, and prospect tracking in Postgres</dd>
+    </dl>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Status &amp; Outcome</span>
+    <div class="prose">
+      <p><strong>Live, with real revenue.</strong> VibeCS has paying customers — acquired through the outreach pipeline it runs on itself. It's also dogfooded across this portfolio: the VibeCaddy site runs the widget, and BlockRate's did too.</p>
+      <p>Pricing is deliberately indie-friendly: free to test, $8/month unlimited, or $50 lifetime.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Lessons</span>
+    <div class="prose">
+      <blockquote class="pull">The customers worth winning are builders and operators paying for leverage — not consumers hunting discounts.
+        <cite>The pattern that BlockRate taught and VibeCS confirmed</cite>
+      </blockquote>
+      <p>VibeCS is the portfolio thesis at its most literal: a context layer (your own website) that eliminates a blank slate (an untrained support bot). When the setup cost of a category is the barrier, deleting setup <em>is</em> the product.</p>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a href="vibecaddy.html"><span class="dir">← Previous · № 03</span><span class="name">VibeCaddy</span></a>
+    <a href="blockrate.html"><span class="dir">Next · № 05 →</span><span class="name">BlockRate</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="sign-off">Have something worth building?</p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <!-- TODO: LinkedIn URL -->
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="container colophon">
+    <span>© <span data-year>2026</span> Eric Clymer</span>
+    <span>Built by hand. No frameworks, no build step.</span>
+    <span>Set in Fraunces &amp; Newsreader</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

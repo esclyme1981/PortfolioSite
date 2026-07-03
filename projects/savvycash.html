@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SavvyCash — Eric Clymer</title>
+  <meta name="description" content="An iOS fintech app that watches your accounts via Plaid, learns your spending patterns, and proposes sweeps into high-yield savings — but never moves a dollar without you.">
+  <meta property="og:title" content="SavvyCash — Eric Clymer">
+  <meta property="og:description" content="Your money, always working. Pattern detection, bill prediction, and proposed sweeps to high-yield savings.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="case-head">
+    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 06 / 09</span></p>
+    <h1>SavvyCash <span class="badge badge-beta">Beta</span></h1>
+    <p class="one-liner">Your money, always working. An iOS app that watches your accounts, learns your spending rhythm, and proposes sweeps into high-yield savings — but never moves a dollar without you.</p>
+  </div>
+
+  <figure class="plate reveal">
+    <div class="phone">
+      <div class="screen">
+        <span class="app-title">SavvyCash</span>
+        <span class="line">Checking — Patterns Detected: 21</span>
+        <span class="line">Upcoming Bills Predicted: 12</span>
+        <span class="line"><em>▸</em> Proposal: sweep $2,400 → HYSA</span>
+        <span class="line"><em>▸</em> Safe until rent on the 1st</span>
+        <span class="line">Approve · Snooze · Decline</span>
+        <span class="line"><em>You</em> hold the only trigger.</span>
+      </div>
+    </div>
+    <figcaption><em>Fig. 01</em> — The core loop: detect, predict, propose. Never auto-execute.</figcaption>
+  </figure>
+
+  <section class="case-section reveal">
+    <span class="label">The Problem</span>
+    <div class="prose">
+      <p>Most people keep $3,000–$10,000 in checking earning 0.01% while high-yield savings pays 4–5%. That's hundreds of dollars a year, silently forfeited — not out of ignorance, but friction: sweeping money by hand means predicting your own bills, and nobody wants that recurring homework. The pain is real but latent; you don't feel it until someone shows you the number.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">What I Built</span>
+    <div class="prose">
+      <p>SavvyCash does the homework. It links accounts through Plaid, learns your actual spending rhythm, and proposes the sweep — sized and timed so the money is back before your bills land.</p>
+      <ul class="decisions">
+        <li>
+          <span class="decision-title">Patterns, not rules</span>
+          No manual budgeting rules to configure. The engine has detected 21+ recurring spending patterns and predicts 12+ upcoming bills — including credit-card due dates pulled from Plaid's Liabilities API — from transaction history alone.
+        </li>
+        <li>
+          <span class="decision-title">Propose, never execute</span>
+          Every sweep is a proposal the user approves. That's a trust decision first — an app that silently moves your money has to earn something no beta can — and it deliberately sidesteps ACH compliance complexity for v1.
+        </li>
+        <li>
+          <span class="decision-title">Closed loop</span>
+          Predictions come only from your own Plaid data — no external signals, no black-box scores. The same closed-loop conviction as VibeCS, applied to money.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Stack</span>
+    <dl class="stack-list">
+      <dt>iOS</dt><dd>Swift 5.9+, SwiftUI with @Observable (iOS 17+)</dd>
+      <dt>Banking</dt><dd>Plaid — Transactions and Liabilities APIs, production linking live</dd>
+      <dt>Backend</dt><dd>Supabase — Postgres and Edge Functions (Deno/TypeScript)</dd>
+    </dl>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Status &amp; Outcome</span>
+    <div class="prose">
+      <p><strong>In beta, unreleased — and honestly mid-build.</strong> Plaid production linking, transaction sync, pattern detection, and bill prediction all work today. The sweep-proposal engine is still being tuned, executed transfers aren't wired yet, and there's an open product question I haven't answered: is this an autopilot, or a co-pilot whose entire value is the intelligence layer?</p>
+      <p>It's also the portfolio's deliberate stretch: a consumer fintech app from someone whose winning pattern is builder tools — with the App Store, my home turf, as the distribution edge that might make the exception work.</p>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a href="blockrate.html"><span class="dir">← Previous · № 05</span><span class="name">BlockRate</span></a>
+    <a href="workspacehub.html"><span class="dir">Next · № 07 →</span><span class="name">WorkspaceHub</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="sign-off">Have something worth building?</p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <!-- TODO: LinkedIn URL -->
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="container colophon">
+    <span>© <span data-year>2026</span> Eric Clymer</span>
+    <span>Built by hand. No frameworks, no build step.</span>
+    <span>Set in Fraunces &amp; Newsreader</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Remy — Eric Clymer</title>
+  <meta name="description" content="An agent-first iOS dating app: your Remy talks to their Remy before you ever say hello. Built solo with SwiftUI, Supabase, and the Claude API — live on the App Store.">
+  <meta property="og:title" content="Send Remy — Eric Clymer">
+  <meta property="og:description" content="An agent-first iOS dating app: your Remy talks to their Remy before you ever say hello.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="case-head">
+    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 01 / 09</span></p>
+    <h1>Send Remy <span class="badge badge-live">Live</span></h1>
+    <p class="one-liner">An agent-first iOS dating app. Your Remy talks to their Remy — so you stop wasting nights on people you were never going to like.</p>
+    <div class="links">
+      <a href="https://sendremy.com" rel="noopener">sendremy.com</a>
+      <a href="https://apps.apple.com/us/app/sendremy/id6773771294" rel="noopener">App Store</a>
+    </div>
+  </div>
+
+  <figure class="plate plate-browser reveal">
+    <div class="chrome"><i></i><i></i><i></i><span class="url">sendremy.com</span></div>
+    <img src="../assets/screenshots/sendremy-desktop.png" alt="Send Remy landing page — Skip to the third date">
+    <figcaption><em>Fig. 01</em> — "Skip to the third date." Live in Austin &amp; Los Angeles, on the App&nbsp;Store now.</figcaption>
+  </figure>
+
+  <section class="case-section reveal">
+    <span class="label">The Problem</span>
+    <div class="prose">
+      <p>Dating apps run on weeks of low-signal texting. Two tired people trade "hey"s and logistics until one of them gives up, and the ones who persist often discover on date one what a single honest conversation would have surfaced in minutes. For the app-fatigued 28-to-42 crowd — urban, time-poor, actually looking for a relationship — the blank-slate first chat is the single most expensive step in the funnel.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">What I Built</span>
+    <div class="prose">
+      <p>Send Remy gives each person an agent. A conversational onboarding interview builds your persona; from then on, when you like someone in the daily deck, <strong>your agent and theirs hold an async conversation of 12–20 turns</strong> — covering the compatibility ground humans take weeks to reach. You get back a debrief: a compatibility score, highlight moments, and honest tension points. Only when both sides opt in does a human chat open — seeded with tappable first messages drawn from what the agents already learned. No blank slates, no "hey."</p>
+      <ul class="decisions">
+        <li>
+          <span class="decision-title">Date-four energy on date one</span>
+          The goal isn't to "move past looks" — it's to arrive at the first date with the getting-to-know-you already done. The product works with attraction, not against it.
+        </li>
+        <li>
+          <span class="decision-title">The debrief is the product</span>
+          Compatibility score, transcript highlights, and tension points turn a swipe into an informed decision. Even a non-match teaches you something about what you want.
+        </li>
+        <li>
+          <span class="decision-title">Monetization maps to engagement</span>
+          Freemium: three agent sends a day, pay for more. Rate limits are framed in-world — "your agents are busy" — not as a paywall.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Stack</span>
+    <dl class="stack-list">
+      <dt>iOS</dt><dd>SwiftUI, Swift 6</dd>
+      <dt>Backend</dt><dd>Supabase — Postgres, Auth</dd>
+      <dt>AI</dt><dd>Anthropic Claude API — agent personas, conversations, and debrief synthesis</dd>
+      <dt>Push</dt><dd>APNs via Supabase</dd>
+      <dt>Web</dt><dd>Hand-built landing page at sendremy.com</dd>
+    </dl>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Status &amp; Outcome</span>
+    <div class="prose">
+      <p><strong>Live on the App Store</strong>, launched in Austin and Los Angeles. Designed, built, and shipped solo — product spec through Swift code through App Store review. The cold-start problem was de-risked before launch by testing agent conversations against synthetic personas, which is also how the debrief format was tuned.</p>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a href="../index.html#work"><span class="dir">← Back</span><span class="name">Full Index</span></a>
+    <a href="hermes.html"><span class="dir">Next · № 02 →</span><span class="name">Hermes</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="sign-off">Have something worth building?</p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <!-- TODO: LinkedIn URL -->
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="container colophon">
+    <span>© <span data-year>2026</span> Eric Clymer</span>
+    <span>Built by hand. No frameworks, no build step.</span>
+    <span>Set in Fraunces &amp; Newsreader</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

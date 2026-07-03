@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermes — Eric Clymer</title>
+  <meta name="description" content="An iOS command deck for a personal agent infrastructure — email triage, brand monitoring, and a daily briefing for a nine-product portfolio.">
+  <meta property="og:title" content="Hermes — Eric Clymer">
+  <meta property="og:description" content="The iOS command deck for my personal agent infrastructure.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="case-head">
+    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 02 / 09</span></p>
+    <h1>Hermes <span class="badge badge-beta">Beta</span></h1>
+    <p class="one-liner">The iOS command deck for my personal agent infrastructure — the operations layer that lets one person run a nine-product portfolio from a phone.</p>
+  </div>
+
+  <figure class="plate reveal">
+    <div class="phone">
+      <div class="screen">
+        <span class="app-title">Hermes</span>
+        <span class="line">Daily Briefing — 8:00 AM</span>
+        <span class="line"><em>▸</em> 4 emails need replies · 9 archived</span>
+        <span class="line"><em>▸</em> VibeCS outreach: 23 sent, 0 bounces</span>
+        <span class="line"><em>▸</em> 2 Remy agent convos to spot-check</span>
+        <span class="line"><em>▸</em> Reddit: 1 new VibeCaddy mention</span>
+        <span class="line"><em>▸</em> All products nominal</span>
+      </div>
+    </div>
+    <figcaption><em>Fig. 01</em> — The morning briefing, typeset. Private beta; no public build yet.</figcaption>
+  </figure>
+
+  <section class="case-section reveal">
+    <span class="label">The Problem</span>
+    <div class="prose">
+      <p>Running nine products solo generates a very particular kind of noise: support email, outreach pipelines, brand mentions, agent conversations, app statuses. Checking all of it means sitting at a desk cycling through dashboards — which is exactly the kind of recurring, low-judgment work that should belong to software.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">What I Built</span>
+    <div class="prose">
+      <p>Hermes is the iOS client for a self-hosted agent stack that already runs the portfolio's operations on cron. The app puts that infrastructure in a pocket:</p>
+      <ul class="decisions">
+        <li>
+          <span class="decision-title">Email triage from anywhere</span>
+          Gmail triage over OAuth — the agent drafts, archives, and flags; I approve from the phone.
+        </li>
+        <li>
+          <span class="decision-title">One briefing instead of five dashboards</span>
+          Every morning at 8:00: email summary, overnight VibeCS outreach results, Reddit brand mentions, calendar, and per-product status — aggregated into a single readable digest.
+        </li>
+        <li>
+          <span class="decision-title">Ask the vault</span>
+          Natural-language queries against my Obsidian knowledge base — "what did we learn from BlockRate?" gets an answer with sources, on the train.
+        </li>
+        <li>
+          <span class="decision-title">Spot-check the agents</span>
+          Live views into Send Remy agent conversations and SavvyCash debugging — the portfolio's other AI systems, supervised from one app.
+        </li>
+      </ul>
+      <p>The meta-point is the thesis eating its own tail: <strong>I run the portfolio through an agent I built.</strong> Hermes is the context layer for being me.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Stack</span>
+    <dl class="stack-list">
+      <dt>iOS</dt><dd>Swift 6, SwiftUI</dd>
+      <dt>Agent layer</dt><dd>Self-hosted automation stack on cron — triage, monitoring, briefings</dd>
+      <dt>Integrations</dt><dd>Gmail API (OAuth), Supabase, Reddit API, Obsidian vault</dd>
+    </dl>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Status &amp; Outcome</span>
+    <div class="prose">
+      <p><strong>Private beta</strong> — running daily on my own device, which is both its distribution and its product review. It ships publicly if and when the agent stack generalizes beyond an audience of one.</p>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a href="send-remy.html"><span class="dir">← Previous · № 01</span><span class="name">Send Remy</span></a>
+    <a href="vibecaddy.html"><span class="dir">Next · № 03 →</span><span class="name">VibeCaddy</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="sign-off">Have something worth building?</p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <!-- TODO: LinkedIn URL -->
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="container colophon">
+    <span>© <span data-year>2026</span> Eric Clymer</span>
+    <span>Built by hand. No frameworks, no build step.</span>
+    <span>Set in Fraunces &amp; Newsreader</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

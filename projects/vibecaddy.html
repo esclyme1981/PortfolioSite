@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeCaddy — Eric Clymer</title>
+  <meta name="description" content="A Chrome extension that injects your project's context into ChatGPT, Claude, Lovable, and Bolt prompts automatically — so you never re-explain your project to an AI again.">
+  <meta property="og:title" content="VibeCaddy — Eric Clymer">
+  <meta property="og:description" content="Your AI tools forget everything. VibeCaddy doesn't.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="case-head">
+    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 03 / 09</span></p>
+    <h1>VibeCaddy <span class="badge badge-live">Live</span></h1>
+    <p class="one-liner">Your AI tools forget everything. VibeCaddy doesn't — it injects your project's stack, decisions, and conventions into every prompt, across every tool.</p>
+    <div class="links">
+      <a href="https://vibecaddy.ai" rel="noopener">vibecaddy.ai</a>
+    </div>
+  </div>
+
+  <figure class="plate plate-browser reveal">
+    <div class="chrome"><i></i><i></i><i></i><span class="url">vibecaddy.ai</span></div>
+    <img src="../assets/screenshots/vibecaddy-desktop.jpg" alt="VibeCaddy landing page">
+    <figcaption><em>Fig. 01</em> — Live in the Chrome Web Store; used daily on every product in this index.</figcaption>
+  </figure>
+
+  <section class="case-section reveal">
+    <span class="label">The Problem</span>
+    <div class="prose">
+      <p>Every AI session starts from zero. Builders working across ChatGPT, Claude, Lovable, and Bolt re-type the same paragraph dozens of times a day — the stack, the conventions, the decisions already made — and when they don't, they get generic answers that ignore all of it. The tools have no memory of your project, and the cost lands on you, one blank prompt at a time.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">What I Built</span>
+    <div class="prose">
+      <p>VibeCaddy is a Chrome extension that intercepts your prompt before it's sent and prepends the relevant project context — pulled from <strong>VibeOS</strong>, the persistent memory layer underneath it. A vague five-word prompt leaves your keyboard as a fully contextualized instruction. It works across six-plus platforms: ChatGPT, Claude, Lovable, and Bolt fully supported; Base44 and Emergent in beta.</p>
+      <ul class="decisions">
+        <li>
+          <span class="decision-title">A memory layer, not a snippet manager</span>
+          Context is retrieved per-prompt by relevance, with guards against cross-project pollution — your dating-app facts never leak into your fintech prompts.
+        </li>
+        <li>
+          <span class="decision-title">A production eval agent tunes it nightly</span>
+          Every night an eval agent scores the day's optimized prompts, adjusts retrieval similarity thresholds, and marks decayed facts stale. The product literally improves while I sleep — a self-tuning loop most teams never ship.
+        </li>
+        <li>
+          <span class="decision-title">Priced like a tool, not a platform</span>
+          Free tier of five prompts a day; $8/month unlimited; $120 lifetime. The same pricing spine as VibeCS — indie tools for indie builders.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Stack</span>
+    <dl class="stack-list">
+      <dt>Extension</dt><dd>Chrome extension with per-platform prompt interception</dd>
+      <dt>Backend</dt><dd>Supabase — Postgres, Edge Functions</dd>
+      <dt>AI</dt><dd>Anthropic Claude API — prompt optimization and the nightly eval judge</dd>
+      <dt>Web</dt><dd>Landing page and dashboard at vibecaddy.ai</dd>
+    </dl>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Status &amp; Outcome</span>
+    <div class="prose">
+      <p><strong>Live in the Chrome Web Store</strong> and used daily — including on every product in this portfolio, which makes it the most dogfooded thing I've shipped.</p>
+      <p>The honest product-market read: the resonance is real — nobody enjoys re-explaining their project — but distribution is throttled by Chrome's trust warnings on new extensions. That's a distribution problem, not a product problem, and knowing which one you have is the PM skill this project keeps exercising.</p>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a href="hermes.html"><span class="dir">← Previous · № 02</span><span class="name">Hermes</span></a>
+    <a href="vibecs.html"><span class="dir">Next · № 04 →</span><span class="name">VibeCS</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="sign-off">Have something worth building?</p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <!-- TODO: LinkedIn URL -->
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="container colophon">
+    <span>© <span data-year>2026</span> Eric Clymer</span>
+    <span>Built by hand. No frameworks, no build step.</span>
+    <span>Set in Fraunces &amp; Newsreader</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

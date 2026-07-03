@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlockRate — Eric Clymer</title>
+  <meta name="description" content="A group-buying marketplace for home services in Austin — technically my most ambitious build, and the product I deliberately killed. A case study in knowing when.">
+  <meta property="og:title" content="BlockRate — Eric Clymer">
+  <meta property="og:description" content="My most ambitious build — and the product I deliberately killed. A case study in knowing when.">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html">Eric <em>✦</em> Clymer</a>
+    <nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="case-head">
+    <p class="folio"><a class="crumb" href="../index.html#work">← Index of Work</a> <span class="num">№ 05 / 09</span></p>
+    <h1>BlockRate <span class="badge badge-retired">Retired</span></h1>
+    <p class="one-liner">A group-buying marketplace for recurring home services in Austin. Neighbors pooled for volume pricing; providers got route density. It worked, technically. I killed it anyway.</p>
+  </div>
+
+  <figure class="plate reveal">
+    <div class="spec-plate">
+      <div><div class="stat">47</div><div class="stat-label">Austin neighborhoods live</div></div>
+      <div><div class="stat">13</div><div class="stat-label">Supabase edge functions</div></div>
+      <div><div class="stat">$66</div><div class="stat-label">Per visit at 5-household tier, down from $120 solo</div></div>
+      <div><div class="stat">20%</div><div class="stat-label">Platform take rate</div></div>
+    </div>
+    <figcaption><em>Fig. 01</em> — The ledger at shutdown. The site is down; the numbers stand.</figcaption>
+  </figure>
+
+  <section class="case-section reveal">
+    <span class="label">The Model</span>
+    <div class="prose">
+      <p>Lawn care costs $120 a visit when you buy it alone. BlockRate let neighbors pool: at five-plus households on one block, the price fell to $66 a visit, providers got dense routes instead of scattered one-offs, and the platform took 20%. Group-buying economics applied to the most recurring purchase a homeowner makes.</p>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">What I Built</span>
+    <div class="prose">
+      <p>This was the most technically serious product in the portfolio — a real two-sided marketplace, launched across four Austin regions and forty-seven neighborhoods, with at least one paying customer:</p>
+      <ul class="decisions">
+        <li>
+          <span class="decision-title">Money that moves correctly</span>
+          Stripe Connect payouts direct to providers, Stripe Checkout and Billing Portal for customers — with dynamic tiered repricing that recalculated every member's rate on every join or cancellation.
+        </li>
+        <li>
+          <span class="decision-title">Rate protection</span>
+          Thirty-day price locks so a neighbor's cancellation didn't jolt your bill mid-month — the trust mechanic that makes group pricing tolerable.
+        </li>
+        <li>
+          <span class="decision-title">Operational plumbing most MVPs skip</span>
+          Scheduled visit generation with epoch-aligned frequencies, a PGMQ email queue with dead-letter handling via Resend, a Block Champion referral program, a Contentful blog, and admin impersonation for support. Thirteen edge functions, fifteen-plus tables, row-level security throughout.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Why I Killed It</span>
+    <div class="prose">
+      <p>Three reasons, none of them technical.</p>
+      <p><strong>Wrong customer.</strong> Cost-conscious consumers hunting discounts are high-churn and price-defecting — every retention lever fights their core motivation for being there. <strong>No sector edge.</strong> I don't know the home-services industry from the inside, so every provider-side judgment was secondhand. <strong>The go-between trap.</strong> A two-sided marketplace makes you responsible for both sides' failures: provider no-shows became my refunds; customer churn became everyone else's price jumps.</p>
+      <blockquote class="pull">Sophistication of build ≠ viability of business. Building was never the bottleneck — choosing the right problem and customer is.
+        <cite>The lesson that reshaped this portfolio</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Stack</span>
+    <dl class="stack-list">
+      <dt>Payments</dt><dd>Stripe Connect, Checkout, Billing Portal</dd>
+      <dt>Backend</dt><dd>Supabase — 13 Edge Functions, 15+ tables, RLS policies</dd>
+      <dt>Email</dt><dd>PGMQ queue with dead-letter handling, delivered via Resend</dd>
+      <dt>Content</dt><dd>Contentful blog CMS</dd>
+    </dl>
+  </section>
+
+  <section class="case-section reveal">
+    <span class="label">Lessons</span>
+    <div class="prose">
+      <p>One paying customer doesn't validate a business if the <em>category</em> of customer is wrong. BlockRate is why everything after it targets builders and operators paying for leverage — and why this portfolio treats a well-reasoned shutdown as a shipped outcome. Killing your most sophisticated work because the business underneath it is wrong: that's the PM judgment I'd hire for.</p>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a href="vibecs.html"><span class="dir">← Previous · № 04</span><span class="name">VibeCS</span></a>
+    <a href="savvycash.html"><span class="dir">Next · № 06 →</span><span class="name">SavvyCash</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="sign-off">Have something worth building?</p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" rel="noopener">GitHub — esclyme1981</a></li>
+      <!-- TODO: LinkedIn URL -->
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="container colophon">
+    <span>© <span data-year>2026</span> Eric Clymer</span>
+    <span>Built by hand. No frameworks, no build step.</span>
+    <span>Set in Fraunces &amp; Newsreader</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
