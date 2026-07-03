@@ -255,7 +255,7 @@ code, .mono { font-family: var(--mono); }
 .proj:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
 .proj .win-bar .title .idx { color: var(--green); font-weight: 700; }
 
-/* collage area */
+/* collage area — full site + mobile, side by side, no overlap */
 .collage {
   position: relative;
   aspect-ratio: 16 / 9.6;
@@ -266,35 +266,34 @@ code, .mono { font-family: var(--mono); }
   background-size: 20px 20px, 20px 20px, auto;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.8rem, 3%, 1.4rem);
+  padding: 4.5% 4%;
 }
-.collage .shot-main {
-  position: absolute;
-  inset: 8% 22% -4% 5%;
-  object-fit: cover;
-  object-position: top left;
-  width: auto; height: auto;
-  max-width: none;
+/* the zoomed-out full page — whole capture visible, scaled by height */
+.collage .shot-site {
+  height: 100%;
+  width: auto;
   border: 1px solid var(--border);
-  border-radius: 6px 6px 0 0;
+  border-radius: 6px;
   box-shadow: var(--shadow);
 }
 .collage .shot-phone {
-  position: absolute;
-  right: 4.5%;
-  bottom: -6%;
-  width: 24%;
+  height: 80%;
+  width: auto;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: var(--shadow-lift);
   transform: rotate(1.6deg);
   transition: transform 0.25s ease;
 }
-.proj:hover .collage .shot-phone { transform: rotate(0deg) translateY(-4px); }
-.collage .shot-phone.second { right: 31%; bottom: -14%; transform: rotate(-1.8deg); }
-.proj:hover .collage .shot-phone.second { transform: rotate(0deg) translateY(-4px); }
-/* two phones, no desktop — anchored to top so status bars stay visible */
-.collage.phones-only .shot-phone { width: 34%; right: 12%; top: 10%; bottom: auto; }
-.collage.phones-only .shot-phone.second { right: 54%; top: 22%; bottom: auto; }
+.proj:hover .collage .shot-phone { transform: rotate(0deg) translateY(-3px); }
+.collage .shot-phone.second { transform: rotate(-1.8deg); }
+.proj:hover .collage .shot-phone.second { transform: rotate(0deg) translateY(-3px); }
+/* two phones, no desktop */
+.collage.phones-only .shot-phone { height: 92%; }
 
 /* terminal-pane collage (projects with no public screenshots) */
 .collage .pane {
