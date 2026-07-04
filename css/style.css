@@ -224,7 +224,9 @@ code, .mono { font-family: var(--mono); }
 }
 .headshot figcaption::before { content: '# '; }
 @media (max-width: 560px) {
-  .headshot { display: none; }
+  .term-flex { gap: 0.9rem; }
+  .headshot { width: 5.4rem; margin-top: 0.2rem; }
+  .headshot figcaption { font-size: 0.5625rem; }
 }
 
 /* typed reveal (hero) */
@@ -378,32 +380,40 @@ code, .mono { font-family: var(--mono); }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* hover: the command retypes, output cascades in, cursor blinks */
+/* terminal motion: on hover (desktop) or .play (scroll-into-view on touch) —
+   the command retypes, output cascades in, cursor blinks */
 @media (prefers-reduced-motion: no-preference) {
-  .proj:hover .pane .prompt {
+  .proj:hover .pane .prompt,
+  .proj.play .pane .prompt {
     animation: retype 0.7s steps(22, end);
   }
   .proj:hover .pane .ok,
   .proj:hover .pane .err,
   .proj:hover .pane .cmt,
-  .proj:hover .pane .hl {
+  .proj:hover .pane .hl,
+  .proj.play .pane .ok,
+  .proj.play .pane .err,
+  .proj.play .pane .cmt,
+  .proj.play .pane .hl {
     animation: crt-in 0.18s ease backwards;
   }
-  .proj:hover .pane .ln:nth-child(2) { animation-delay: 0.45s; }
-  .proj:hover .pane .ln:nth-child(3) { animation-delay: 0.55s; }
-  .proj:hover .pane .ln:nth-child(4) { animation-delay: 0.65s; }
-  .proj:hover .pane .ln:nth-child(5) { animation-delay: 0.75s; }
-  .proj:hover .pane .ln:nth-child(6) { animation-delay: 0.85s; }
+  .proj:hover .pane .ln:nth-child(2), .proj.play .pane .ln:nth-child(2) { animation-delay: 0.45s; }
+  .proj:hover .pane .ln:nth-child(3), .proj.play .pane .ln:nth-child(3) { animation-delay: 0.55s; }
+  .proj:hover .pane .ln:nth-child(4), .proj.play .pane .ln:nth-child(4) { animation-delay: 0.65s; }
+  .proj:hover .pane .ln:nth-child(5), .proj.play .pane .ln:nth-child(5) { animation-delay: 0.75s; }
+  .proj:hover .pane .ln:nth-child(6), .proj.play .pane .ln:nth-child(6) { animation-delay: 0.85s; }
   .pane .ln:last-child::after {
     content: '▮';
     margin-left: 0.3em;
     color: #fff;
     opacity: 0;
   }
-  .proj:hover .pane .ln:last-child::after {
+  .proj:hover .pane .ln:last-child::after,
+  .proj.play .pane .ln:last-child::after {
     opacity: 1;
     animation: blink 1.05s steps(1) 0.95s infinite;
   }
+  .proj.play .proj-meta .open { text-decoration: underline; }
   @keyframes retype {
     from { clip-path: inset(0 100% 0 0); }
     to   { clip-path: inset(0 0 0 0); }
@@ -705,6 +715,42 @@ code, .mono { font-family: var(--mono); }
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .proj-grid { grid-template-columns: 1fr; }
+}
+
+/* small screens: CRTs stack — big visual on top, full-width pane below */
+@media (max-width: 700px) {
+  .collage,
+  .collage.phone-primary {
+    flex-direction: column;
+    aspect-ratio: auto;
+    padding: 7% 6% 6%;
+    gap: 1.1rem;
+  }
+  .collage .shot-site {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 340px;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .collage .shot-phone,
+  .collage.phone-primary .shot-phone {
+    height: auto;
+    width: min(64%, 250px);
+    transform: none;
+  }
+  .collage .pane {
+    flex: none;
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 2.05;
+    padding: 0.1rem 0.1rem 0;
+  }
+  .win-bar { font-size: 0.75rem; }
+  .sec-head { flex-wrap: wrap; }
+  .sec-head h2 { white-space: nowrap; }
+  .sec-head .note { flex-basis: 100%; order: 3; }
 }
 @media (max-width: 760px) {
   .trio { grid-template-columns: 1fr; }
