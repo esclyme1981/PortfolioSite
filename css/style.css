@@ -378,6 +378,42 @@ code, .mono { font-family: var(--mono); }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* hover: the command retypes, output cascades in, cursor blinks */
+@media (prefers-reduced-motion: no-preference) {
+  .proj:hover .pane .prompt {
+    animation: retype 0.7s steps(22, end);
+  }
+  .proj:hover .pane .ok,
+  .proj:hover .pane .err,
+  .proj:hover .pane .cmt,
+  .proj:hover .pane .hl {
+    animation: crt-in 0.18s ease backwards;
+  }
+  .proj:hover .pane .ln:nth-child(2) { animation-delay: 0.45s; }
+  .proj:hover .pane .ln:nth-child(3) { animation-delay: 0.55s; }
+  .proj:hover .pane .ln:nth-child(4) { animation-delay: 0.65s; }
+  .proj:hover .pane .ln:nth-child(5) { animation-delay: 0.75s; }
+  .proj:hover .pane .ln:nth-child(6) { animation-delay: 0.85s; }
+  .pane .ln:last-child::after {
+    content: '▮';
+    margin-left: 0.3em;
+    color: #fff;
+    opacity: 0;
+  }
+  .proj:hover .pane .ln:last-child::after {
+    opacity: 1;
+    animation: blink 1.05s steps(1) 0.95s infinite;
+  }
+  @keyframes retype {
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0 0 0); }
+  }
+  @keyframes crt-in {
+    from { opacity: 0; transform: translateX(-4px); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+
 .pane .ok::before   { content: '✓ '; color: #a5ffbd; font-weight: 700; }
 .pane .err::before  { content: '✗ '; color: #ffc2c2; font-weight: 700; }
 .pane .add          { color: #b8ffca; }
@@ -458,7 +494,18 @@ code, .mono { font-family: var(--mono); }
 /* ============================================================
    Case-study pages
    ============================================================ */
+
+/* Per-project accent (body class on each case page).
+   Used sparingly: header stripe, ## prefixes, links, callout. */
+.theme-rust   { --accent: #a63c15; }
+.theme-dos    { --accent: #10289c; }
+.theme-green  { --accent: #0d7132; }
+.theme-orange { --accent: #c2410c; }
+.theme-pine   { --accent: #1d5a38; }
+.theme-azure  { --accent: #1d4ed8; }
+.theme-amber  { --accent: #8a5215; }
 .case-wrap { padding-top: clamp(1.6rem, 4vw, 2.8rem); }
+.case-head-win { border-top: 3px solid var(--accent, var(--green)); }
 .case-head-win .term { padding-block: 1rem 1.2rem; }
 .case-head-win .h-row {
   display: flex;
@@ -479,7 +526,7 @@ code, .mono { font-family: var(--mono); }
 .case-head-win .links a {
   font-family: var(--mono);
   font-size: 0.8125rem;
-  color: var(--green-deep);
+  color: var(--accent, var(--green-deep));
   font-weight: 600;
   text-decoration: none;
 }
@@ -562,7 +609,7 @@ code, .mono { font-family: var(--mono); }
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
-.case-sec > h2::before { content: '## '; color: var(--green); }
+.case-sec > h2::before { content: '## '; color: var(--accent, var(--green)); }
 .case-sec .prose { max-width: 66ch; }
 .case-sec .prose p { margin: 0 0 1em; }
 .case-sec .prose a { color: var(--blue); text-decoration: none; }
@@ -608,7 +655,7 @@ code, .mono { font-family: var(--mono); }
 .callout {
   margin: 1.4rem 0;
   padding: 0.9rem 1.1rem;
-  border-left: 3px solid var(--green);
+  border-left: 3px solid var(--accent, var(--green));
   background: var(--surface);
   border-radius: 0 var(--radius) var(--radius) 0;
   font-family: var(--mono);
@@ -637,7 +684,7 @@ code, .mono { font-family: var(--mono); }
 .pagination .dir { display: block; font-size: 0.65625rem; color: var(--ink-faint); margin-bottom: 0.3rem; }
 .pagination .dir::before { content: '$ cd '; color: var(--green); }
 .pagination .name { font-weight: 700; font-size: 0.9375rem; }
-.pagination a:hover .name { color: var(--green-deep); }
+.pagination a:hover .name { color: var(--accent, var(--green-deep)); }
 .pagination a.next { text-align: right; }
 
 /* ---------- 404 ---------- */
