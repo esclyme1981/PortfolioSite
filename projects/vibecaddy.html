@@ -45,23 +45,18 @@
       <img src="../assets/screenshots/vibecaddy-desktop.jpg" alt="VibeCaddy landing page" loading="lazy">
       <figcaption class="cap">live in the chrome web store · used daily on every product in this directory</figcaption>
     </figure>
-    <div style="display:grid; gap: clamp(1rem, 2.6vw, 1.6rem);">
-      <figure class="win shot-win reveal" style="margin:0;">
-        <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">390px</span><span class="spacer"></span></div>
-        <img src="../assets/screenshots/vibecaddy-mobile.jpg" alt="VibeCaddy site on mobile" loading="lazy">
-        <figcaption class="cap">mobile</figcaption>
-      </figure>
-      <figure class="win reveal" style="margin:0;">
-        <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">eval-agent — nightly</span><span class="spacer"></span></div>
-        <div class="log">
-          <span class="ln prompt">eval-agent --nightly</span>
-          <span class="ln ok">scored 61 optimized prompts</span>
-          <span class="ln ok">retrieval threshold +0.03</span>
-          <span class="ln ok">2 stale facts flagged</span>
-          <span class="ln cmt"># self-tunes while I sleep</span>
-        </div>
-      </figure>
-    </div>
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">eval-agent — nightly</span><span class="spacer"></span></div>
+      <div class="log">
+        <span class="ln prompt">eval-agent --nightly</span>
+        <span class="ln ok">scored 61 optimized prompts</span>
+        <span class="ln ok">agents grade + learn from every prompt</span>
+        <span class="ln ok">retrieval threshold +0.03</span>
+        <span class="ln ok">2 stale facts flagged</span>
+        <span class="ln ok">custom RAG pipeline · instant context retrieval</span>
+        <span class="ln cmt"># self-tunes while I sleep</span>
+      </div>
+    </figure>
   </div>
 
   <section class="case-sec reveal">
@@ -77,7 +72,8 @@
       <li><strong>Interception, not copy-paste.</strong> The extension catches your prompt pre-send and prepends relevant context from VibeOS, the persistent memory layer underneath. Five vague words leave as a fully-contextualized instruction.</li>
       <li><strong>Six-plus platforms.</strong> ChatGPT, Claude, Lovable, Bolt fully supported; Base44 and Emergent in beta. One memory, every tool.</li>
       <li><strong>Relevance with guardrails.</strong> Context is retrieved per-prompt with cross-project pollution guards — dating-app facts never leak into fintech prompts.</li>
-      <li><strong>A production eval agent.</strong> Nightly: score the day's optimizations, adjust retrieval thresholds, stale out decayed facts. A self-tuning loop most teams talk about and never ship.</li>
+      <li><strong>A production eval agent.</strong> Nightly: agents grade and learn from every prompt, adjust retrieval thresholds, stale out decayed facts. A self-tuning loop most teams talk about and never ship.</li>
+      <li><strong>A custom RAG pipeline.</strong> Context retrieval is purpose-built for the prompt path — relevant project facts arrive instantly, not after a round-trip you can feel.</li>
       <li><strong>Priced like a tool.</strong> Free tier · $8/mo · $120 lifetime. Indie tools for indie builders.</li>
     </ul>
   </section>
