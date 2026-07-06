@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>blockrate — Eric Clymer</title>
-  <meta name="description" content="A group-buying marketplace for home services in Austin. Real revenue, wrong business — killed on purpose, fast. The post-mortem.">
-  <meta property="og:title" content="blockrate — Eric Clymer">
+  <title>blockrate – Eric Clymer</title>
+  <meta name="description" content="A group-buying marketplace for home services in Austin. Real revenue, wrong business – killed on purpose, fast. The post-mortem.">
+  <meta property="og:title" content="blockrate – Eric Clymer">
   <meta property="og:description" content="Real revenue, wrong business. Killed on purpose, fast. The post-mortem.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://esclyme1981.github.io/PortfolioSite/assets/og-image.png">
@@ -29,16 +29,16 @@
   <p class="crumbs"><a href="../index.html#work">~/products</a> / blockrate <span>05 of 07</span></p>
 
   <div class="win case-head-win">
-    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">blockrate — POST-MORTEM.md</span><span class="spacer"></span></div>
+    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">blockrate – POST-MORTEM.md</span><span class="spacer"></span></div>
     <div class="term">
       <div class="h-row"><h1>BlockRate</h1><span class="tag tag-killed">KILLED</span><span class="tag tag-live">REVENUE</span></div>
-      <p class="one-liner">Group-buying for recurring home services: neighbors pooled for volume pricing, providers got route density, the platform took 20%. It worked — technically. This page is about why I shut it down anyway.</p>
+      <p class="one-liner">Group-buying for recurring home services: neighbors pooled for volume pricing, providers got route density, the platform took 20%. It worked – technically. This page is about why I shut it down anyway.</p>
     </div>
   </div>
 
   <div class="visuals duo">
     <figure class="win reveal" style="margin:0;">
-      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">git log — the build</span><span class="spacer"></span></div>
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">git log – the build</span><span class="spacer"></span></div>
       <div class="log">
         <span class="ln cmt"># two-sided marketplace, launched for real</span>
         <span class="ln add">+ stripe connect payouts · checkout · billing portal</span>
@@ -52,13 +52,13 @@
         <span class="ln del">- supply side wasn't tech-savvy</span>
         <span class="ln del">- wrong customer: discount hunters churn</span>
         <span class="ln prompt">git tag v-final -m "wrong business. right call."</span>
-        <span class="ln err">process terminated — exit 137</span>
+        <span class="ln err">process terminated – exit 137</span>
       </div>
     </figure>
     <figure class="win shot-win reveal" style="margin:0;">
-      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">blockrate.pro — before shutdown</span><span class="spacer"></span></div>
-      <img src="../assets/screenshots/blockrate-web.jpg" alt="BlockRate landing page — save on lawn care and pool service when your neighbors join in" loading="lazy">
-      <figcaption class="cap">the landing page. it was real, it was polished, and it earned revenue — none of which saves a wrong business.</figcaption>
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">blockrate.pro – before shutdown</span><span class="spacer"></span></div>
+      <img src="../assets/screenshots/blockrate-web.jpg" alt="BlockRate landing page – save on lawn care and pool service when your neighbors join in" loading="lazy">
+      <figcaption class="cap">the landing page. it was real, it was polished, and it earned revenue – none of which saves a wrong business.</figcaption>
     </figure>
   </div>
 
@@ -78,7 +78,7 @@
   <section class="case-sec reveal">
     <h2>the model</h2>
     <div class="prose">
-      <p>Lawn care runs $120 a visit solo. Pool five-plus households on one block and BlockRate priced it at $66 — providers got dense routes instead of scattered one-offs, and the platform took 20%. Group-buying economics on the most recurring purchase a homeowner makes. On paper, elegant. On paper.</p>
+      <p>Lawn care runs $120 a visit solo. Pool five-plus households on one block and BlockRate priced it at $66 – providers got dense routes instead of scattered one-offs, and the platform took 20%. Group-buying economics on the most recurring purchase a homeowner makes. On paper, elegant. On paper.</p>
     </div>
   </section>
 
@@ -86,10 +86,10 @@
     <h2>why it died</h2>
     <ul class="takes">
       <li><strong>It turned me into a customer-service rep.</strong> Every provider no-show, reschedule, and refund landed in my inbox. The job stopped being "build the marketplace" and became "apologize between two parties, daily."</li>
-      <li><strong>The supply side wasn't tech-savvy.</strong> Providers ran their businesses on phone calls and paper. Every feature I shipped needed a phone call to explain — you can't automate a side that doesn't want software.</li>
-      <li><strong>Wrong customer.</strong> Cost-conscious consumers hunting discounts are high-churn by definition — every retention lever fights their reason for being there.</li>
+      <li><strong>The supply side wasn't tech-savvy.</strong> Providers ran their businesses on phone calls and paper. Every feature I shipped needed a phone call to explain – you can't automate a side that doesn't want software.</li>
+      <li><strong>Wrong customer.</strong> Cost-conscious consumers hunting discounts are high-churn by definition – every retention lever fights their reason for being there.</li>
     </ul>
-    <div class="callout red">A working product with revenue can still be the wrong business. Reading that signal in months — not years — is what experience looks like.
+    <div class="callout red">A working product with revenue can still be the wrong business. Reading that signal in months – not years – is what experience looks like.
       <span class="src">the one-line lesson that reshaped everything after it</span>
     </div>
   </section>
@@ -98,7 +98,7 @@
     <h2>stack</h2>
     <dl class="kv">
       <dt>payments</dt><dd>Stripe Connect · Checkout · Billing Portal</dd>
-      <dt>backend</dt><dd>Supabase — Postgres · Edge Functions · RLS throughout</dd>
+      <dt>backend</dt><dd>Supabase – Postgres · Edge Functions · RLS throughout</dd>
       <dt>email</dt><dd>PGMQ queue + dead-letter handling via Resend</dd>
       <dt>content</dt><dd>Contentful blog CMS</dd>
     </dl>
@@ -107,7 +107,7 @@
   <section class="case-sec reveal">
     <h2>lessons</h2>
     <div class="prose">
-      <p>Three paying customers don't validate a business if the <em>category</em> of customer is wrong. BlockRate is why everything after it targets builders and operators paying for leverage — and why a fast, well-reasoned shutdown counts as a shipped outcome in this directory. The tech wasn't the point and never is: the point is how quickly you recognize "not right" and act on it. That speed is the judgment I'd hire a PM for.</p>
+      <p>Three paying customers don't validate a business if the <em>category</em> of customer is wrong. BlockRate is why everything after it targets builders and operators paying for leverage – and why a fast, well-reasoned shutdown counts as a shipped outcome in this directory. The tech wasn't the point and never is: the point is how quickly you recognize "not right" and act on it. That speed is the judgment I'd hire a PM for.</p>
     </div>
   </section>
 
@@ -126,7 +126,7 @@
       <li><a href="https://www.linkedin.com/in/ericclymer/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ericclymer</a></li>
     </ul>
     <div class="colophon">
-      <span class="exit">exit 0 — © <span data-year>2026</span> Eric Clymer</span>
+      <span class="exit">exit 0 – © <span data-year>2026</span> Eric Clymer</span>
       <span>hand-written html/css/js · no frameworks · no build step</span>
       <span>JetBrains Mono &amp; IBM Plex Sans</span>
     </div>
