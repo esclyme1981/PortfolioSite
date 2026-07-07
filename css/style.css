@@ -485,6 +485,7 @@ code, .mono { font-family: var(--mono); }
 }
 .footer .prompt-line { margin: 0 0 0.9rem; font-weight: 600; }
 .footer .prompt-line::before { content: '$ '; color: var(--green); font-weight: 700; }
+.footer .prompt-line .cmt { color: var(--ink-faint); font-weight: 400; }
 .footer ul { list-style: none; margin: 0 0 1.6rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; }
 .footer ul a { color: var(--blue); text-decoration: none; font-size: 0.8125rem; }
 .footer ul a:hover { text-decoration: underline; }
@@ -599,6 +600,17 @@ code, .mono { font-family: var(--mono); }
 .log .del { color: var(--red); }
 .log .hl { color: var(--ink); font-weight: 600; }
 .log .prompt::before { content: '$ '; color: var(--green); font-weight: 700; }
+.log .yr { display: inline-block; min-width: 3.4rem; color: var(--ink-faint); }
+.log a { color: var(--blue); text-decoration: none; }
+.log a:hover { text-decoration: underline; }
+/* wrapping variant (career log): hanging indent under the year column */
+.log.wraps .ln {
+  white-space: normal;
+  padding-left: 3.4rem;
+  text-indent: -3.4rem;
+}
+.log.wraps .ln.prompt, .log.wraps .ln.cmt { padding-left: 0; text-indent: 0; }
+.log.wraps .yr { text-indent: 0; }
 
 /* stat blocks */
 .stats {
