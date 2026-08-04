@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>drop-in – Eric Clymer</title>
+  <meta name="description" content="A foam-dart extraction shooter that runs in a browser tab. Loot the park, dodge the darts, bank your tickets at a green gate – get tagged and you drop everything.">
+  <meta property="og:title" content="drop-in – Eric Clymer">
+  <meta property="og:description" content="An extraction shooter in a browser tab. No install, no launcher – click and you're in the park.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://esclyme1981.github.io/PortfolioSite/assets/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="theme-indigo">
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html"><span class="host">ericclymer</span><span class="path">:~/products/drop-in</span></a>
+    <nav>
+      <a href="../index.html#work">./work</a>
+      <a href="../index.html#about">./about</a>
+      <a href="../index.html#contact">./contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container case-wrap">
+  <p class="crumbs"><a href="../index.html#work">~/products</a> / drop-in <span>08 of 08</span></p>
+
+  <div class="win case-head-win">
+    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">drop-in – README.md</span><span class="spacer"></span></div>
+    <div class="term">
+      <div class="h-row"><h1>Drop In</h1><span class="tag tag-live">LIVE</span></div>
+      <p class="one-liner">Foam dart extraction. Loot the park, dodge the darts, reach a green gate to bank your tickets – get tagged and you drop everything. A real multiplayer shooter that runs in a browser tab, no install and no launcher.</p>
+      <div class="links">
+        <a href="https://dropin.fly.dev/" target="_blank" rel="noopener noreferrer">dropin.fly.dev</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="visuals duo">
+    <figure class="win shot-win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">dropin.fly.dev – the drop screen</span><span class="spacer"></span></div>
+      <img src="../assets/screenshots/dropin-web.jpg" alt="Drop In – foam dart extraction, controls and drop-in screen" loading="lazy">
+      <figcaption class="cap">one button between a cold tab and a live park. that's the whole install flow.</figcaption>
+    </figure>
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">the run – one loop</span><span class="spacer"></span></div>
+      <div class="log">
+        <span class="ln prompt">dropin --play</span>
+        <span class="ln ok">dropped in · 0 banked</span>
+        <span class="ln ok">looted a container · +6 tickets</span>
+        <span class="ln ok">goo gun → instant cover</span>
+        <span class="ln hl">→ 6 at risk · gate 40m out</span>
+        <span class="ln err">tagged. backpack dropped.</span>
+        <span class="ln cmt"># the loot always comes back</span>
+      </div>
+    </figure>
+  </div>
+
+  <section class="case-sec reveal">
+    <h2>problem</h2>
+    <div class="prose">
+      <p>The extraction loop – carry loot you can lose, decide when to walk – is the tensest thing in games. It's also locked behind 80GB downloads, launchers, accounts, and a console. None of that is the fun part. The fun part is a park, a backpack, and the choice to push your luck one more container.</p>
+    </div>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>built</h2>
+    <ul class="takes">
+      <li><strong>The whole loop in a browser tab.</strong> No install, no launcher, no account. Click DROP IN and you're in the park with other people in a couple of seconds.</li>
+      <li><strong>Greed is the mechanic.</strong> Tickets in your backpack are worthless until you reach a green gate. Bank small and safe, or keep looting. Get tagged and the backpack hits the ground for whoever's watching.</li>
+      <li><strong>Foam darts, not bullets.</strong> Same tension, none of the grimness – a park, snacks that heal you, and a Goo Gun whose pull drops a pillar of instant cover you can double-jump on top of.</li>
+      <li><strong>Plays on whatever you're holding.</strong> Mouse and keyboard, a controller it auto-detects, or touch with a thumbstick and drag-to-look. On iPhone, Add to Home Screen strips Safari's chrome and it opens fullscreen.</li>
+      <li><strong>Voice, maps, and your own HUD.</strong> Live voice chat in the park, a built-in map editor, and a HUD you can rearrange. Park bots toggle off when you want real players only.</li>
+    </ul>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>stack</h2>
+    <dl class="kv">
+      <dt>client</dt><dd>Three.js · WebGL · Vite</dd>
+      <dt>multiplayer</dt><dd>realtime park sessions + in-game voice chat</dd>
+      <dt>input</dt><dd>mouse + keyboard · gamepad · touch (installable on iOS)</dd>
+      <dt>hosting</dt><dd>Fly.io</dd>
+    </dl>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>status</h2>
+    <div class="prose">
+      <p><strong>Live and playable right now</strong> – desktop, phone, or controller, from a link. The odd one out in this directory on genre and the most on-thesis on method: a realtime 3D multiplayer game is the kind of thing that "needs a team and a year," so it was worth finding out how fast one person could put a playable one in front of people.</p>
+      <div class="callout">Distribution is the feature. Every install step you delete is players you keep.</div>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a class="win" href="norwalk-rental.html"><span class="dir">../norwalk-lane</span><span class="name">← 07 · Norwalk Lane</span></a>
+    <a class="win next" href="../index.html#work"><span class="dir">../</span><span class="name">end of ls – all products →</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="prompt-line">contact --any-channel <span class="cmt"># comparing notes with people building meaningful things</span></p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" target="_blank" rel="noopener noreferrer">github.com/esclyme1981</a></li>
+      <li><a href="https://www.linkedin.com/in/ericclymer/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ericclymer</a></li>
+    </ul>
+    <div class="colophon">
+      <span class="exit">exit 0 – © <span data-year>2026</span> Eric Clymer</span>
+      <span>hand-written html/css/js · no frameworks · no build step</span>
+      <span>JetBrains Mono &amp; IBM Plex Sans</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script data-goatcounter="https://esclyme1981.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

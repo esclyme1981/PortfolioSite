@@ -331,6 +331,7 @@ code, .mono { font-family: var(--mono); }
 .crt-pine   { --crt-hi: #2c7a4b; --crt-mid: #17472e; --crt-lo: #082416; }  /* blockrate */
 .crt-azure  { --crt-hi: #3f86f8; --crt-mid: #1d4ed8; --crt-lo: #12277a; }  /* savvycash */
 .crt-amber  { --crt-hi: #c98434; --crt-mid: #8a5215; --crt-lo: #452806; }  /* norwalk */
+.crt-indigo { --crt-hi: #5b5fc7; --crt-mid: #2f3070; --crt-lo: #16162e; }  /* drop in */
 /* the zoomed-out full page — whole capture visible, scaled by height.
    max-width + cover keeps landscape shots from starving their neighbor. */
 .collage .shot-site {
@@ -516,6 +517,7 @@ code, .mono { font-family: var(--mono); }
 .theme-pine   { --accent: #1d5a38; }
 .theme-azure  { --accent: #1d4ed8; }
 .theme-amber  { --accent: #8a5215; }
+.theme-indigo { --accent: #3b3a99; }
 .case-wrap { padding-top: clamp(1.6rem, 4vw, 2.8rem); }
 .case-head-win { border-top: 3px solid var(--accent, var(--green)); }
 .case-head-win .term { padding-block: 1rem 1.2rem; }
