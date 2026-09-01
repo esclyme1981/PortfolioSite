@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stackers – Eric Clymer</title>
+  <meta name="description" content="An extraction shooter in a browser tab: loot the industrial yards the machines run, extract with what you can carry, die and the yard keeps your pack. Godot, WebAssembly, shipped on itch.io.">
+  <meta property="og:title" content="stackers – Eric Clymer">
+  <meta property="og:description" content="Loot. Shoot. Reboot. An extraction shooter that runs in a browser tab.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://esclyme1981.github.io/PortfolioSite/assets/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="theme-steel">
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html"><span class="host">ericclymer</span><span class="path">:~/products/stackers</span></a>
+    <nav>
+      <a href="../index.html#work">./work</a>
+      <a href="../index.html#about">./about</a>
+      <a href="../index.html#contact">./contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container case-wrap">
+  <p class="crumbs"><a href="../index.html#work">~/products</a> / stackers <span>04 of 09</span></p>
+
+  <div class="win case-head-win">
+    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">stackers – README.md</span><span class="spacer"></span></div>
+    <div class="term">
+      <div class="h-row"><h1>Stackers</h1><span class="tag tag-live">LIVE</span></div>
+      <p class="one-liner">Loot. Shoot. Reboot. An extraction shooter set in industrial yards the machines quietly run – crack open caches, outwit the residents, get out with everything you can carry. Die out there and the yard keeps your pack. Runs in a browser tab.</p>
+      <div class="links">
+        <a href="https://esclyme.itch.io/stackers" target="_blank" rel="noopener noreferrer">esclyme.itch.io/stackers</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="visuals duo">
+    <figure class="win shot-win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">the railhead – stack canyons</span><span class="spacer"></span></div>
+      <img src="../assets/screenshots/stackers-web.jpg" alt="Stackers gameplay – the Railhead container yard under the gantry" loading="lazy">
+      <figcaption class="cap">container canyons kill your sight lines. the stack tops are a second world, if you can get up there.</figcaption>
+    </figure>
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">the run – one loop</span><span class="spacer"></span></div>
+      <div class="log">
+        <span class="ln prompt">stackers --drop works</span>
+        <span class="ln ok">cores seated: teleport · shield</span>
+        <span class="ln ok">cache cracked · pack filling</span>
+        <span class="ln err">warden patrol · whistle screaming</span>
+        <span class="ln hl">→ extract now or push one more rack</span>
+        <span class="ln cmt"># die here and the yard keeps it</span>
+      </div>
+    </figure>
+  </div>
+
+  <div class="visuals duo">
+    <figure class="win shot-win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">the works – weld lines + rack canyons</span><span class="spacer"></span></div>
+      <img src="../assets/screenshots/stackers-works.jpg" alt="Stackers – The Works factory interior with core abilities on the HUD" loading="lazy">
+      <figcaption class="cap">two cores per run, bound to Q and F. the whole build is those two choices.</figcaption>
+    </figure>
+    <figure class="win shot-win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">the culvert – hub between runs</span><span class="spacer"></span></div>
+      <img src="../assets/screenshots/stackers-hub.jpg" alt="Stackers – the Culvert hub, floor lights leading to The Melt" loading="lazy">
+      <figcaption class="cap">bank your take, seat new cores, follow the floor lights to the next drop.</figcaption>
+    </figure>
+  </div>
+
+  <section class="case-sec reveal">
+    <h2>problem</h2>
+    <div class="prose">
+      <p>Extraction shooters are the genre people talk about and rarely finish – because the good ones need a persistent world, a progression system, enemies with real behavior, and other players in the same space. That combination is what "you need a studio and two years" is supposed to mean. Drop In proved the loop fits in a browser tab. Stackers asks the harder question: does the <em>depth</em> fit too?</p>
+    </div>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>built</h2>
+    <ul class="takes">
+      <li><strong>Three yards and a hub.</strong> The Works, a live factory with a basement where only your flashlight helps. The Railhead, a container port under a 24-meter gantry. The Melt, an open-cast smelter at night where descending is free and every way back up has to be earned. The Culvert ties them together.</li>
+      <li><strong>Cores, not classes.</strong> Six permanent abilities – teleport, scan, push, shield, foam, daze – bought in order on one circuit, upgraded with scrap, transformed at the top tier only with materials a yard's boss gives up. You bring two per run, and those two <em>are</em> your build.</li>
+      <li><strong>The machines are the fiction.</strong> Pickers scavenge, Wardens patrol and shoot, Whistles scream your position to everything nearby, Haulers ignore you until you make it personal. They telegraph, converge, and get reinforced – and more real players in the yard means more machines walking in through the gates.</li>
+      <li><strong>Shared world by default.</strong> Six Stackers per yard, all after the same pods, with proximity voice on a held key. Bring a duo and you get a through-wall marker wearing their handle and revives when they go down. Friendly fire stays on.</li>
+      <li><strong>Still just a link.</strong> Godot exported to WebAssembly, shipped on itch.io. Gamepad support is one button press. No launcher, no install, no account.</li>
+    </ul>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>stack</h2>
+    <dl class="kv">
+      <dt>engine</dt><dd>Godot 4 · exported to WebAssembly</dd>
+      <dt>multiplayer</dt><dd>shared yards, six players each · proximity voice · duo invites</dd>
+      <dt>systems</dt><dd>six-core progression circuit · boss-gated materials · persistent bank</dd>
+      <dt>distribution</dt><dd>itch.io, playable in the browser · gamepad supported</dd>
+    </dl>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>status</h2>
+    <div class="prose">
+      <p><strong>Live on itch.io</strong> – playable solo or with a partner, right now, from a link. The second game in this directory and the more ambitious one: Drop In was one park and one loop, Stackers is three maps, a hub, a progression tree, four enemy archetypes with bosses, and a shared world.</p>
+      <div class="callout">The interesting question was never "can one person build a shooter." It's how much depth survives when you refuse to make anyone install anything.</div>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a class="win" href="dropin.html"><span class="dir">../drop-in</span><span class="name">← 03 · Drop In</span></a>
+    <a class="win next" href="vibecaddy.html"><span class="dir">../vibecaddy</span><span class="name">05 · VibeCaddy →</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="prompt-line">contact --any-channel <span class="cmt"># comparing notes with people building meaningful things</span></p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" target="_blank" rel="noopener noreferrer">github.com/esclyme1981</a></li>
+      <li><a href="https://www.linkedin.com/in/ericclymer/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ericclymer</a></li>
+    </ul>
+    <div class="colophon">
+      <span class="exit">exit 0 – © <span data-year>2026</span> Eric Clymer</span>
+      <span>hand-written html/css/js · no frameworks · no build step</span>
+      <span>JetBrains Mono &amp; IBM Plex Sans</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script data-goatcounter="https://esclyme1981.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
