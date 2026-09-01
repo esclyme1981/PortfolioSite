@@ -168,6 +168,7 @@ code, .mono { font-family: var(--mono); }
 .tag-beta     { color: var(--amber);      background: var(--amber-tint); }
 .tag-killed   { color: var(--red);        background: var(--red-tint); }
 .tag-featured { color: var(--blue);       background: #e6eefb; }
+.tag-free     { color: #3b3a99;          background: #eaeaf7; }
 
 /* ---------- Hero terminal ---------- */
 .hero { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 4.5vw, 3.5rem); }
