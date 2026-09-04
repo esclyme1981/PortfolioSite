@@ -94,6 +94,8 @@ h1, h2, h3 { margin: 0; font-family: var(--mono); letter-spacing: -0.02em; }
 code, .mono { font-family: var(--mono); }
 
 /* ---------- Masthead ---------- */
+html { scroll-padding-top: 4rem; } /* sticky masthead; anchor jumps land below it */
+@media (max-width: 700px) { html { scroll-padding-top: 6rem; } }
 .masthead {
   position: sticky;
   top: 0;
@@ -334,6 +336,7 @@ code, .mono { font-family: var(--mono); }
 .crt-amber  { --crt-hi: #c98434; --crt-mid: #8a5215; --crt-lo: #452806; }  /* norwalk */
 .crt-indigo { --crt-hi: #5b5fc7; --crt-mid: #2f3070; --crt-lo: #16162e; }  /* drop in */
 .crt-steel  { --crt-hi: #6f7d8c; --crt-mid: #3b4653; --crt-lo: #171c22; }  /* stackers */
+.crt-sky    { --crt-hi: #6fc3ea; --crt-mid: #2f7fb5; --crt-lo: #143a5c; }  /* flip it */
 /* the zoomed-out full page — whole capture visible, scaled by height.
    max-width + cover keeps landscape shots from starving their neighbor. */
 .collage .shot-site {
@@ -521,6 +524,7 @@ code, .mono { font-family: var(--mono); }
 .theme-amber  { --accent: #8a5215; }
 .theme-indigo { --accent: #3b3a99; }
 .theme-steel  { --accent: #3f5163; }
+.theme-sky    { --accent: #2f7fb5; }
 .case-wrap { padding-top: clamp(1.6rem, 4vw, 2.8rem); }
 .case-head-win { border-top: 3px solid var(--accent, var(--green)); }
 .case-head-win .term { padding-block: 1rem 1.2rem; }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flip-it – Eric Clymer</title>
+  <meta name="description" content="Flip to Infinity: a tap-only house-flipping game in a browser tab. 214 players and 1,269 houses sold in its first 24 hours. Zero dependencies, one HTML file, free on itch.io.">
+  <meta property="og:title" content="flip-it – Eric Clymer">
+  <meta property="og:description" content="Buy junk. Furnish. Sell. Move up. 214 players in the first 24 hours.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://esclyme1981.github.io/PortfolioSite/assets/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="theme-sky">
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand" href="../index.html"><span class="host">ericclymer</span><span class="path">:~/game-design/flip-it</span></a>
+    <nav>
+      <a href="../index.html#work">./work</a>
+      <a href="../index.html#games">./games</a>
+      <a href="../index.html#about">./about</a>
+      <a href="../index.html#contact">./contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container case-wrap">
+  <p class="crumbs"><a href="../index.html#games">~/game-design</a> / flip-it <span>01 of 03</span></p>
+
+  <div class="win case-head-win">
+    <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">flip-it – README.md</span><span class="spacer"></span></div>
+    <div class="term">
+      <div class="h-row"><h1>Flip It</h1><span class="tag tag-live">LIVE</span><span class="tag tag-free">FREE</span><span class="tag tag-featured">214 PLAYERS · DAY ONE</span></div>
+      <p class="one-liner">Flip to Infinity is a tap-only house-flipping game. Buy other people's junk at the yard sale, put it in the right rooms, sell the house, and move up a 20-house ladder that ends somewhere no realtor has a listing for. One verb, no ads, no accounts, no timers.</p>
+      <div class="links">
+        <a href="https://esclyme.itch.io/flip-it" target="_blank" rel="noopener noreferrer">esclyme.itch.io/flip-it</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="visuals">
+    <div>
+      <div class="strip reveal">
+        <img src="../assets/screenshots/flipit-01.jpg" alt="Flip to Infinity – the 20-house ladder" loading="lazy">
+        <img src="../assets/screenshots/flipit-05.jpg" alt="Flip to Infinity – the yard sale, with a haggle die on every item" loading="lazy">
+        <img src="../assets/screenshots/flipit-02.jpg" alt="Flip to Infinity – furnishing a two-story colonial" loading="lazy">
+        <img src="../assets/screenshots/flipit-04.jpg" alt="Flip to Infinity – sold, in a cold market" loading="lazy">
+        <img src="../assets/screenshots/flipit-03.jpg" alt="Flip to Infinity – moving up to the starter bungalow" loading="lazy">
+      </div>
+      <p class="strip-note">the loop, left to right – pick a house → buy junk → furnish → sell → move up. every visual is inline SVG drawn in code.</p>
+    </div>
+  </div>
+
+  <div class="visuals duo">
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">launch – first 24 hours</span><span class="spacer"></span></div>
+      <div class="log">
+        <span class="ln prompt">flipit --launch --window 24h</span>
+        <span class="ln ok">214 players · 246 sessions</span>
+        <span class="ln ok">1,269 houses sold</span>
+        <span class="ln ok">21 players past house 10</span>
+        <span class="ln ok">0 ads · 0 accounts · 0 install</span>
+        <span class="ln hl">→ live · free on itch.io</span>
+        <span class="ln cmt"># measured by the game, not estimated</span>
+      </div>
+    </figure>
+    <figure class="win reveal" style="margin:0;">
+      <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="title">the numbers</span><span class="spacer"></span></div>
+      <div class="stats">
+        <div><div class="n">214</div><div class="l">players in the first 24 hours</div></div>
+        <div><div class="n">1,269</div><div class="l">houses sold on day one</div></div>
+        <div><div class="n">81%</div><div class="l">clear the first house with zero instructions</div></div>
+        <div><div class="n">1</div><div class="l">verb – tap</div></div>
+        <div><div class="n">0</div><div class="l">dependencies – one html file</div></div>
+        <div><div class="n">~60s</div><div class="l">per house, a new mechanic every five</div></div>
+      </div>
+    </figure>
+  </div>
+
+  <section class="case-sec reveal">
+    <h2>problem</h2>
+    <div class="prose">
+      <p>Phone games ask for drag, aim, and timing, then pay for it with ads and timers. This one had to survive being played one-handed on a phone by someone half paying attention – so the constraint came first: one verb. Everything else in the design is downstream of <em>tap</em>.</p>
+    </div>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>built</h2>
+    <ul class="takes">
+      <li><strong>One resource, one number.</strong> Cash buys the junk, the junk furnishes the house, the house sells for more cash. Nothing else to track and nothing to explain – the first two houses ship with no instructions, and 81% and 82% of players clear them anyway.</li>
+      <li><strong>A mechanic every five houses.</strong> Haggle die at 3, Department Store at 6, road die at 11, an auction on every sale from 16, Hard Mode laps after the credits. A house is about a minute, so something new lands roughly every five.</li>
+      <li><strong>The economy is one pure object.</strong> Every constant lives in <code>PARAMS</code>; the module has no DOM and no state. So bots can play thousands of runs, assert invariants, and grid-search the constants overnight.</li>
+      <li><strong>Instrumented before it needed fixing.</strong> Anonymous, build-tagged events from the first session – which is how the 58% cliff at house three showed up, and why a tutorial, a simpler gate, and a re-spaced ladder shipped the same week.</li>
+      <li><strong>Ships as one file.</strong> Zero dependencies, every visual inline SVG drawn in code, all sound synthesized. The same <code>dist/index.html</code> went to itch, an artifact URL, and could drop into a native shell unchanged.</li>
+    </ul>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>stack</h2>
+    <dl class="kv">
+      <dt>engine</dt><dd>vanilla HTML/CSS/JS ES modules · zero dependencies</dd>
+      <dt>art + sound</dt><dd>inline SVG generated in code · synthesized audio</dd>
+      <dt>economy</dt><dd>pure <code>econ.js</code> · bot simulator · grid-search tuner</dd>
+      <dt>analytics</dt><dd>anonymous build-tagged events → Supabase · funnel by house</dd>
+      <dt>distribution</dt><dd>one <code>dist/index.html</code> → itch.io · phone or desktop</dd>
+    </dl>
+  </section>
+
+  <section class="case-sec reveal">
+    <h2>status</h2>
+    <div class="prose">
+      <p><strong>Live and free.</strong> Launched the evening of September 3rd with nothing but the itch listing; by the same hour the next day, 214 people had played and sold 1,269 houses between them. The whole game is one verb and one number, and that is the entire onboarding.</p>
+      <div class="callout">If the loop fits in four words, nobody has to be taught it.</div>
+    </div>
+  </section>
+
+  <nav class="pagination" aria-label="Project navigation">
+    <a class="win" href="../index.html#games"><span class="dir">../</span><span class="name">all games</span></a>
+    <a class="win next" href="stackers.html"><span class="dir">../stackers</span><span class="name">02 · Stackers →</span></a>
+  </nav>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-inner">
+    <p class="prompt-line">contact --any-channel <span class="cmt"># comparing notes with people building meaningful things</span></p>
+    <ul>
+      <li><a href="mailto:esclyme@gmail.com">esclyme@gmail.com</a></li>
+      <li><a href="https://github.com/esclyme1981" target="_blank" rel="noopener noreferrer">github.com/esclyme1981</a></li>
+      <li><a href="https://www.linkedin.com/in/ericclymer/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ericclymer</a></li>
+    </ul>
+    <div class="colophon">
+      <span class="exit">exit 0 – © <span data-year>2026</span> Eric Clymer</span>
+      <span>hand-written html/css/js · no frameworks · no build step</span>
+      <span>JetBrains Mono &amp; IBM Plex Sans</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script data-goatcounter="https://esclyme1981.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
